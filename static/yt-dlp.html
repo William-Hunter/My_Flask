@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>下载视频</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <style>
+    .iinput{
+      width: 866px;
+    }
+    .butt{
+      width:170px;
+      margin-top: 25px;
+      margin-left: 20px;
+    }
+    .inlinne{
+      height: 50px;
+    }
+
+    .youtube-btn{
+			background-color:#FF0000;
+		}
+
+		.bilibili-btn{
+			background-color:#00AEEC;
+		}
+
+  </style>
+</head>
+
+<body>
+
+  <h1>请输入要下载的链接</h1>
+  <input type="text" name="url" id="url" class="iinput inlinne">
+  
+<br>
+
+  <button type="button" id="" class="butt inlinne youtube-btn" onclick="dosomething('normal')">
+    油管 普通下载
+  </button>
+
+  <button type="button" id="" class="butt inlinne youtube-btn" onclick="dosomething('HD')">
+    油管 1080P下载
+  </button>
+
+  <button type="button" id="" class="butt inlinne youtube-btn" onclick="dosomething('mp3')">
+    油管 MP3下载
+  </button>
+
+<br>
+
+  <button type="button" id="" class="butt inlinne bilibili-btn" onclick="dosomething('normal')">
+    B站 视频下载
+  </button>
+
+  <button type="button" id="" class="butt inlinne bilibili-btn" onclick="dosomething('mp3')">
+    B站 MP3下载
+  </button>
+
+</body>
+<script>
+
+  function dosomething(type) {
+    var url = document.getElementById("url").value;
+    // alert("value:"+url)
+    if (typeof url === "undefined" || url === null || url.trim() === "") {
+      alert("请你输入下载链接")
+    } else if(!url.startsWith("http") && !url.startsWith("https") ) {
+      alert("下载链接格式不对")
+    }else if(url.endsWith("/shorts")||url.endsWith("/videos")||url.endsWith("/playlists")
+        ||url.endsWith("/streams")||url.endsWith("/channels") ) {
+      alert("不能下载集合")
+    }else {
+      // console.log(url);
+      url = encodeURIComponent(url)
+      // console.log(url);
+
+      var domain = window.location.host;
+      console.log(domain)
+
+      // return
+      axios({// GET request for remote image in node.js
+        method: 'get',
+        url: 'http://' + domain + '/api/youtube-dl?url=' + url+'&type='+type+'&website=123'
+      }).then(function (response) {
+        alert(response.data)
+        document.getElementById("url").value = "";
+      });
+    }
+  }
+
+
+</script>
+
+</html>

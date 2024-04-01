@@ -1,0 +1,64 @@
+ * Debug mode: off
+[2024-04-01 11:25:33,485] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.110:5000
+[2024-04-01 11:25:33,485] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 11:26:19,262] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:26:19] "GET /link_keeper/delete?id=RFqDHMOXgiDpeIMkh9mH HTTP/1.0" 200 -
+[2024-04-01 11:26:23,125] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:26:23] "GET /link_keeper/add?url=https://dddddd&title=2222 HTTP/1.0" 200 -
+[2024-04-01 11:26:30,011] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:26:30] "GET /link_keeper/add?url=https://dadadawdsf&title=kkkk HTTP/1.0" 200 -
+[2024-04-01 11:29:39,076] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:29:39] "GET /link_keeper/add?url=https://mail.google.com/mail/u/0/%23inbox&title=Gmail HTTP/1.0" 200 -
+[2024-04-01 11:29:41,119] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:29:41] "GET /link_keeper/delete?id=kTNruozonQVrLFDKPhdL HTTP/1.0" 200 -
+[2024-04-01 11:29:42,669] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:29:42] "GET /link_keeper/delete?id=Ocz0pYXkjqop75bqXC7O HTTP/1.0" 200 -
+[2024-04-01 11:29:55,306] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:29:55] "GET /link_keeper/add?url=https://data.eastmoney.com/cjsj/globalRate.html&title=全球利率 HTTP/1.0" 200 -
+[2024-04-01 11:32:07,438] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:32:07] "GET /link_keeper/add?url=https://m.huxiu.com/article/2843958.html&title=浙江第四城，加速入都市圈 HTTP/1.0" 200 -
+[2024-04-01 11:34:08,362] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:34:08] "GET /link_keeper/add?url=https://juejin.cn/post/6989109527886954527&title=Redis%206.0%20新特性 HTTP/1.0" 200 -
+[2024-04-01 11:34:18,108] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:34:18] "GET /link_keeper/add?url=https://www.google.com/search?q%3Dredis%2B%25E5%25A4%259A%25E7%25BA%25BF%25E7%25A8%258Bio%26newwindow%3D1%26sca_esv%3D576e4e7685de117a%26sca_upv%3D1%26sxsrf%3DACQVn0_egoQ5rSqYQgGORxK-I8tBO4u3Gw%253A1711934503553%26ei%3DJwwKZru3IdeH1e8Ps8GAwAw%26ved%3D0ahUKEwj75tn_7J-FAxXXQ_UHHbMgAMgQ4dUDCBA%26uact%3D5%26oq%3Dredis%2B%25E5%25A4%259A%25E7%25BA%25BF%25E7%25A8%258Bio%26gs_lp%3DEgxnd3Mtd2l6LXNlcnAiEXJlZGlzIOWkmue6v-eoi2lvMgUQABiABEi2H1DIAljXG3ABeAGQAQCYAbsBoAHICqoBBDEuMTG4AQPIAQD4AQGYAg2gAvYKwgIKEAAYRxjWBBiwA8ICChAjGIAEGIoFGCfCAgQQIxgnwgIKEAAYgAQYigUYQ8ICBxAAGIAEGAyYAwCIBgGQBgqSBwQyLjExoAeEFg%26sclient%3Dgws-wiz-serp&title=redis%20多线程io HTTP/1.0" 200 -
+[2024-04-01 11:34:37,329] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:34:37] "GET /link_keeper/add?url=https://www.youtube.com/@ByteByteGo/community&title=ByteByteGo HTTP/1.0" 200 -
+[2024-04-01 11:40:32,975] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:40:32] "GET /link_keeper/add?url=https://aaaaaaa&title=AAAAA HTTP/1.0" 200 -
+[2024-04-01 11:40:41,329] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:40:41] "GET /link_keeper/delete?id=gjWIgkC2A39blX98vHM9 HTTP/1.0" 200 -
+[2024-04-01 11:40:46,040] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:40:46] "GET /link_keeper/add?url=https://aaaaaaa&title=aaaaaa HTTP/1.0" 200 -
+[2024-04-01 11:40:54,748] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:40:54] "GET /link_keeper/delete?id=nHWz4IDZU3YgttwyTgpZ HTTP/1.0" 200 -
+[2024-04-01 11:43:06,621] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:43:06] "GET /link_keeper/add?url=https://github.com/William-Hunter?tab%3Drepositories&title=My%20Github HTTP/1.0" 200 -
+[2024-04-01 11:48:29,735] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:48:29] "GET /link_keeper/add?url=http://101.35.218.66:5244/&title=Alist HTTP/1.0" 200 -
+[2024-04-01 11:48:47,832] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:48:47] "GET /link_keeper/add?url=http://101.35.218.66:10880/&title=Gogs HTTP/1.0" 200 -
+[2024-04-01 11:48:55,984] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:48:55] "GET /link_keeper/add?url=http://101.35.218.66:5700/login&title=QingLong HTTP/1.0" 200 -
+[2024-04-01 11:48:59,429] ERROR in app: Exception on /link_keeper/delete [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/opt/workspace/flask/app.py", line 74, in link_keeper_delete
+    link_keeper.delete(id)
+  File "/opt/workspace/flask/link_keeper/link_keeper.py", line 97, in delete
+    div=htmlSoup.select_one("body div#"+id)
+  File "/usr/local/lib/python3.8/dist-packages/bs4/element.py", line 2089, in select_one
+    return self.css.select_one(selector, namespaces, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/bs4/css.py", line 128, in select_one
+    return self.api.select_one(
+  File "/usr/local/lib/python3.8/dist-packages/soupsieve/__init__.py", line 132, in select_one
+    return compile(select, namespaces, flags, **kwargs).select_one(tag)
+  File "/usr/local/lib/python3.8/dist-packages/soupsieve/__init__.py", line 65, in compile
+    return cp._cached_css_compile(
+  File "/usr/local/lib/python3.8/dist-packages/soupsieve/css_parser.py", line 204, in _cached_css_compile
+    CSSParser(
+  File "/usr/local/lib/python3.8/dist-packages/soupsieve/css_parser.py", line 1129, in process_selectors
+    return self.parse_selectors(self.selector_iter(self.pattern), index, flags)
+  File "/usr/local/lib/python3.8/dist-packages/soupsieve/css_parser.py", line 965, in parse_selectors
+    key, m = next(iselector)
+  File "/usr/local/lib/python3.8/dist-packages/soupsieve/css_parser.py", line 1122, in selector_iter
+    raise SelectorSyntaxError(msg, self.pattern, index)
+soupsieve.util.SelectorSyntaxError: Malformed id selector at position 8
+  line 1:
+body div#2NbvxQmVO1Tt03zunrg9
+        ^
+[2024-04-01 11:48:59,470] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:48:59] "[35m[1mGET /link_keeper/delete?id=2NbvxQmVO1Tt03zunrg9 HTTP/1.0[0m" 500 -
+[2024-04-01 11:49:06,108] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:49:06] "GET /link_keeper/add?url=http://101.35.218.66:5700/login&title=青龙面板 HTTP/1.0" 200 -
+[2024-04-01 11:49:15,028] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:49:15] "GET /link_keeper/add?url=http://101.35.218.66:8787/&title=IT工具箱 HTTP/1.0" 200 -
+[2024-04-01 11:49:24,829] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:49:24] "GET /link_keeper/add?url=http://101.35.218.66:42320/ff4ab60e96&title=1Panel HTTP/1.0" 200 -
+[2024-04-01 11:49:33,381] INFO in _internal: 127.0.0.1 - - [01/Apr/2024 11:49:33] "GET /link_keeper/add?url=http://101.35.218.66:4000/&title=wewe-rss HTTP/1.0" 200 -
