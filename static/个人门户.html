@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://101.35.218.66/navg/navg.html -->
+<html lang="en"><plasmo-csui></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--<base target="_blank">--><base href="." target="_blank">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>个人门户</title>
+	<!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script> -->
+	<script src="./个人门户_files/jquery.js"></script>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<!-- <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+		crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="./个人门户_files/bootstrap.min.css" crossorigin="anonymous">
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<!-- <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"
+		crossorigin="anonymous"></script> -->
+	<script src="./个人门户_files/bootstrap.min.js" crossorigin="anonymous"></script>
+	<style>
+		body {
+			/* background-color: #d2b48c; */
+			background-color: #008080;
+		}
+
+		.btn:hover {
+			background-color: #efb106;
+		}
+
+		.btn:active {
+			background-color: #efb106;
+		}
+
+		.center-block {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.element {
+			.center-block();
+		}
+
+		.btn-group-lg>.btn,
+		.btn-lg {
+			margin-bottom: 4px;
+		}
+
+		.img-in-button {
+			width: 21px;
+			height: 21px;
+		}
+	</style>
+<style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immersive-translate-loading-spinner {
+  vertical-align: middle !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+  border: 2px rgba(221, 244, 255, 0.6) solid !important;
+  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+}
+
+@-webkit-keyframes immersive-translate-loading-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes immersive-translate-loading-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+  .immersive-translate-search-enhancement-en-title {
+    color: #bdc1c6;
+  }
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 40px 24px 24px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 270px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative
+}
+
+.immersive-translate-modal .immersive-translate-modal-content-in-input {
+  max-width: 500px;
+}
+.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+  text-align: left;
+  max-height: unset;
+}
+
+.immersive-translate-modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.immersive-translate-modal-body {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  word-break: break-all;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.immersive-translate-close {
+  color: #666666;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.immersive-translate-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 16px;
+  margin: 0 8px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-action-btn {
+  background-color: transparent;
+  color: #EA4C89;
+  border: 1px solid #EA4C89
+}
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-primary-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}</style></head>
+
+<body data-new-gr-c-s-check-loaded="14.1165.0" data-gr-ext-installed="">
+	<div class="container">
+		<!-- <div class="container-fluid">		 -->
+		<div class="center-block">
+			<div class="row">
+				<h1>搜索</h1>
+				<div class="col-offset-1 col-sm-11 col-md-11 col-lg-11">
+					<input class="form-control input-lg " type="text" id="search_text" placeholder="Search for..." onkeydown="return onKeyPress(event)">
+				</div>
+				<div class="col-offset-1 col-sm-11 col-md-11 col-lg-11">
+					<button class="btn btn-default btn-lg" type="button" onclick="googleSearch()">Go</button>
+					<button class="btn btn-default btn-lg" type="button" onclick="bingSearch()">Bing</button>
+					<button class="btn btn-default btn-lg" type="button" onclick="phindSearch()">Phind</button>
+					<button class="btn btn-default btn-lg" type="button" onclick="youtubeSearch()">Yt</button>
+					<button class="btn btn-default btn-lg" type="button" onclick="bilibiliSearch()">BiliBili</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1>生活</h1>
+				<a class="btn btn-default btn-lg" href="https://app.any.do/tasks/next-seven-days?d=anydo%3A%2F%2Fanydo%3Faction%3Dtasktab">
+					<img src="./个人门户_files/favicon.ico" class="img-in-button" alt="">
+					Any.do
+				</a>
+				<a class="btn btn-default btn-lg" href="https://wannianrili.bmcx.com/">
+					<img src="./个人门户_files/i_c_o.png" class="img-in-button" alt="">
+					万年历
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.kongfz.com/index.php">
+					<img src="./个人门户_files/favicon(1).ico" class="img-in-button" alt="">
+					孔夫子旧书网
+				</a>
+				<a class="btn btn-default btn-lg" href="https://miaosha.jd.com/?cu=true&amp;utm_source=www.infinitynewtab.com&amp;utm_medium=tuiguang&amp;utm_campaign=t_45363_&amp;utm_term=59b2487782c545fe8ab47520026647f4">
+					京东
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.12306.cn/index/index.html">
+					<img src="./个人门户_files/favicon(2).ico" class="img-in-button" alt="">
+					铁路12306
+				</a>
+				<a class="btn btn-default btn-lg" href="https://translate.google.com/">
+					<img src="./个人门户_files/favicon(3).ico" class="img-in-button" alt="">
+					谷歌翻译
+				</a>
+
+			</div>
+
+			<div class="row">
+				<h1>求知</h1>
+				<a class="btn btn-default btn-lg" href="https://www.google.com.hk/alerts?hl=zh-cn">
+					<img src="./个人门户_files/favicon(4).ico" class="img-in-button" alt="">
+					谷歌快讯
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8888/#unread/all">
+					<img src="./个人门户_files/logo.png" class="img-in-button" alt="">
+					RSS新闻
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:4000/">
+					<img src="./个人门户_files/wewe-rss.png" class="img-in-button" alt="">
+					wewe-rss
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.youtube.com/feed/subscriptions">
+					<img src="./个人门户_files/favicon(5).ico" class="img-in-button" alt="">
+					油管订阅
+				</a>
+				<a class="btn btn-default btn-lg" href="https://t.bilibili.com/?tab=video">
+					<img src="./个人门户_files/favicon(6).ico" class="img-in-button" alt="">
+					哔哩哔哩
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8677/api/static/yt-dlp.html">
+					视频下载
+				</a>
+				<a class="btn btn-default btn-lg" href="https://zh.wikisource.org/wiki/Wikisource:%E9%A6%96%E9%A1%B5">
+					<img src="./个人门户_files/wikisource.ico" class="img-in-button" alt="">
+					维基文库
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8083/">
+					<img src="./个人门户_files/favicon(7).ico" class="img-in-button" alt="">
+					Calibre
+				</a>
+				<a class="btn btn-default btn-lg" href="https://podcasts.google.com/subscriptions">
+					<img src="./个人门户_files/podcasts_24dp.png" class="img-in-button" alt="">
+					播客队列
+				</a>
+				<a class="btn btn-default btn-lg" href="https://web.telegram.org/a/">
+					<img src="./个人门户_files/favicon.svg" class="img-in-button" alt="">
+					电报
+				</a>
+				<a class="btn btn-default btn-lg" href="https://chat-e2ee-2.azurewebsites.net/">
+					<img src="./个人门户_files/favicon.png" class="img-in-button" alt="">
+					Chat-E2EE
+				</a>
+				<a class="btn btn-default btn-lg" href="https://mail.google.com/mail/u/0/#inbox">
+					<img src="./个人门户_files/gmail.ico" class="img-in-button" alt="">
+					Gmail
+				</a>
+				<a class="btn btn-default btn-lg" href="https://mail.qq.com/cgi-bin/frame_html?sid=hVvauqNl3hArdDdU&amp;r=a50b9486157609c2935ed38356a161c8&amp;lang=zh">
+					<img src="./个人门户_files/favicon(8).ico" class="img-in-button" alt="">
+					QQ mail
+				</a>
+				<a class="btn btn-default btn-lg" href="https://mail.126.com/js6/main.jsp?sid=VBvTJVWiKoKzoknirWiiwQdeEtmjFLVI&amp;df=mail163_letter#module=mbox.ListModule%7C%7B%22fid%22%3A1%2C%22order%22%3A%22date%22%2C%22desc%22%3Atrue%7D">
+					<img src="./个人门户_files/favicon(9).ico" class="img-in-button" alt="">
+					126 mail
+				</a>
+				<a class="btn btn-default btn-lg" href="https://twitter.com/home">
+					<img src="./个人门户_files/twitter.2.ico" class="img-in-button" alt="">
+					推特
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.instagram.com/">
+					<img src="./个人门户_files/30PrGfR3xhB.png" class="img-in-button" alt="">
+					Instagram
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.tiktok.com/">
+					<img src="./个人门户_files/logo_144c91a.png" class="img-in-button" alt="">
+					Tiktok
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8485/">
+					<!-- <img src="https://lf16-tiktok-common.ibytedtos.com/obj/tiktok-web-common-sg/mtact/static/images/logo_144c91a.png?v=2" -->
+						<!-- class="img-in-button" alt=""> -->
+						Moodist
+				</a>
+			</div>
+
+			<div class="row">
+				<h1>Work</h1>
+				<a class="btn btn-default btn-lg" href="http://139.196.189.172:15672/#/queues">
+					<img src="./个人门户_files/favicon(10).ico" class="img-in-button" alt="">
+					Rabbit MQ
+				</a>
+				<a class="btn btn-default btn-lg" href="https://signin.aliyun.com/wilson@amerilink.onaliyun.com/login.htm">
+					<img src="./个人门户_files/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico" class="img-in-button" alt="">
+					阿里云
+				</a>
+				<a class="btn btn-default btn-lg" href="https://safe.aichotels.net.cn/luna/?login_to=49533e70-f5f6-4381-8868-3ff87be17d77">
+					<img src="./个人门户_files/logo(1).png" class="img-in-button" alt="">
+					Jumpserver
+				</a>
+				<a class="btn btn-default btn-lg" href="http://es.aichotels.net.cn/app/kibana">
+					kibana
+				</a>
+				<a class="btn btn-default btn-lg" href="https://docs.google.com/document/u/0/">
+					<img src="./个人门户_files/kix-favicon7.ico" class="img-in-button" alt="">
+					谷歌文档
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.processon.com/">
+					<img src="http://101.35.218.66/navg/navg.html" class="img-in-button" alt="">
+					PressOn
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.linkedin.com/feed/">
+					<!-- <img src="https://web.telegram.org/a/favicon.svg" class="img-in-button" alt=""> -->
+					领英
+				</a>
+			</div>
+
+			<div class="row">
+				<h1>理財</h1>
+				<a class="btn btn-default btn-lg" href="https://cn.tradingview.com/symbols/ETHUSD/">
+					TradingView 自选
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.google.com/finance/portfolio/watchlist?hl=zh">
+					<img src="./个人门户_files/favicon(11).png" class="img-in-button" alt="">
+					谷歌财经
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.coingecko.com/zh/portfolio">
+					<img src="./个人门户_files/favicon(12).ico" class="img-in-button" alt="">
+					CoinGecKo
+				</a>
+				<a class="btn btn-default btn-lg" href="https://quote.cngold.org/gjs/swhj_zghj.html">
+					<!-- <img src="https://ssl.gstatic.com/finance/favicon/favicon.png" class="img-in-button" alt=""> -->
+					中国黄金
+				</a>
+				<a class="btn btn-default btn-lg" href="https://quote.cngold.org/gjs/gjhj_xhhj.html">
+					<!-- <img src="https://ssl.gstatic.com/finance/favicon/favicon.png" class="img-in-button" alt=""> -->
+					现货黄金
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.szse.cn/aboutus/calendar/index.html">
+					<img src="./个人门户_files/favicon(13).ico" class="img-in-button" alt="">
+					交易日历
+				</a>
+				<a class="btn btn-default btn-lg" href="https://wglh.com/">
+					<img src="./个人门户_files/favicon(14).ico" class="img-in-button" alt="">
+					乌龟量化
+				</a>
+				<a class="btn btn-default btn-lg" href="https://eniu.com/">
+					<img src="./个人门户_files/favicon(15).ico" class="img-in-button" alt="">
+					亿牛网
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.paypal.com/myaccount/summary?intl=0">
+					<img src="./个人门户_files/pp_favicon_x.ico" class="img-in-button" alt="">
+					Paypal
+				</a>
+				<a class="btn btn-default btn-lg" href="https://coinmarketcap.com/zh/">
+					<img src="./个人门户_files/favicon(16).ico" class="img-in-button" alt="">
+					CoinMarketCap
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.aicoin.com/">
+					<img src="./个人门户_files/favicon(17).ico" class="img-in-button" alt="">
+					AIcoin
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8677/trade_web/">
+					炒股辅助器
+				</a>
+			</div>
+
+			<div class="row">
+				<h1>Tech工具</h1>
+				<a class="btn btn-default btn-lg" href="https://web.postman.co/workspace/My-Workspace~a42025e0-3762-4097-8428-c64d6ec63dae/request/1858867-5f160bfb-2c85-4394-bc68-5070f0af0d44?tab=body">
+					Postman
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:42320/ff4ab60e96">
+					1Panel
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:7500/static/#/">
+					FrpS dashboard
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:9000/">
+					<img src="./个人门户_files/2dcfc527d067d4ae3424.png" class="img-in-button" alt="">
+					Portainer
+				</a>
+				<a class="btn btn-default btn-lg" href="https://aierplane.com/">
+					<img src="./个人门户_files/favicon(18).ico" class="img-in-button" alt="">
+					aierplane
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8677/sub-web/">
+					<img src="./个人门户_files/favicon-32x32.png" class="img-in-button" alt="">
+					sub-web
+				</a>
+				<a class="btn btn-default btn-lg" href="https://sub.aierplane.com/">
+					<img src="./个人门户_files/favicon-32x32(1).png" class="img-in-button" alt="">
+					Zealouse sub-web
+				</a>
+				<a class="btn btn-default btn-lg" href="https://speedssk.com/user">
+					speedssk
+				</a>
+				<a class="btn btn-default btn-lg" href="https://github.com/William-Hunter">
+					<img src="./个人门户_files/main-qimg-729a22aba98d1235fdce4883accaf81e" class="img-in-button" alt="">
+					GitHub
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:10880/">
+					<img src="./个人门户_files/favicon(19).png" class="img-in-button" alt="">
+					Gogs
+				</a>
+				<a class="btn btn-default btn-lg" href="https://f-droid.org/zh_Hans/packages/">
+					<!-- <img src="" class="img-in-button" alt=""> -->
+					F-droid
+				</a>
+				<a class="btn btn-default btn-lg" href="https://play.google.com/store/apps">
+					<!-- <img src="" class="img-in-button" alt=""> -->
+					Google Play
+				</a>
+				<a class="btn btn-default btn-lg" href="https://chat.openai.com/chat">
+					<img src="./个人门户_files/favicon-32x32(2).png" class="img-in-button" alt="">
+					ChatGPT
+				</a>
+				<a class="btn btn-default btn-lg" href="https://devv.ai/zh">
+					devv.ai
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.phind.com/search?home=true">
+					phind
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:8787/">
+					<img src="./个人门户_files/favicon(20).ico" class="img-in-button" alt="">
+					IT tools
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.baidufe.com/fehelper/index/index.html">
+					<img src="./个人门户_files/favicon(21).ico" class="img-in-button" alt="">
+					FeHelper
+				</a>
+
+			</div>
+
+			<div class="row">
+				<h1>存儲同步</h1>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:5244/">
+					<img src="./个人门户_files/logo.svg" class="img-in-button" alt="">
+					Alist
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:7778/">
+					Sync X220
+				</a>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66:7777/gui/">
+					Sync Tencent
+				</a>
+				<a class="btn btn-default btn-lg" href="https://drive.google.com/drive/">
+					<img src="./个人门户_files/drive_2022q3_32dp.png" class="img-in-button" alt="">
+					谷歌硬盘
+				</a>
+				<a class="btn btn-default btn-lg" href="https://mega.nz/fm/KPph3Ioa">
+					<img src="./个人门户_files/favicon(22).ico" class="img-in-button" alt="">
+					Mega云盘
+				</a>
+				<a class="btn btn-default btn-lg" href="https://pan.baidu.com/disk/main#/index?category=all">
+					<img src="./个人门户_files/favicon-main.ico" class="img-in-button" alt="">
+					百度网盘
+				</a>
+				<a class="btn btn-default btn-lg" href="https://pan.xunlei.com/?path=%2F">
+					<img src="./个人门户_files/icon.png" class="img-in-button" alt="">
+					迅雷云盘
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.aliyundrive.com/drive">
+					<img src="./个人门户_files/favicon(23).ico" class="img-in-button" alt="">
+					阿里云盘
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.icloud.com/">
+					<img src="./个人门户_files/favicon-32x32(3).png" class="img-in-button" alt="">
+					iCloud
+				</a>
+
+			</div>
+
+			<div class="row">
+				<h1>地图</h1>
+				<a class="btn btn-default btn-lg" href="https://www.google.com/maps/@34.1966531,113.7035599,76625a,35y,34.23t/data=!3m1!1e3">
+					<img src="./个人门户_files/maps15_bnuw3a_32dp.ico" class="img-in-button" alt="">
+					谷歌地图
+				</a>
+				<a class="btn btn-default btn-lg" href="https://map.baidu.com/@12657647.671856025,4108094.3060110407,15z,50t">
+					<img src="./个人门户_files/favicon(24).ico" class="img-in-button" alt="">
+					百度地图
+				</a>
+				<a class="btn btn-default btn-lg" href="https://ditu.amap.com/">
+					<img src="./个人门户_files/favicon(25).ico" class="img-in-button" alt="">
+					高德地图
+				</a>
+				<a class="btn btn-default btn-lg" href="https://earth.google.com/web/@27.63091223,-105.34108534,590.97634967a,8915681.7458117d,35y,0h,0t,0r/data=CisSKRIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTciBWVhcnRo">
+					Earth at Night
+				</a>
+				<a class="btn btn-default btn-lg" href="https://www.worldtimezone.com/index_cn.php">
+					<img src="./个人门户_files/time.ico" class="img-in-button" alt="">
+					时钟地图
+				</a>
+			</div>
+
+			
+			<!-- example -->
+			<div class="row">
+				<h1>类别</h1>
+				<a class="btn btn-default btn-lg" href="http://101.35.218.66/navg/URL">
+					<img src="http://101.35.218.66/navg/navg.html" class="img-in-button" alt="">
+					title
+				</a>
+			</div>
+			<!-- end -->
+
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		document.getElementById("search_text").focus();
+
+		function googleSearch() {
+			jump("https://www.google.com/search?q=")
+		}
+		function bingSearch() {
+			jump("https://cn.bing.com/search?q=")
+		}
+		function youtubeSearch() {
+			jump("https://www.youtube.com/results?search_query=")
+		}
+		function bilibiliSearch() {
+			jump("https://search.bilibili.com/all?keyword=")
+		}
+		function phindSearch() {
+			jump("https://www.phind.com/search?source=searchbox&q=")
+		}
+
+		function jump(url_format) {
+			var search_text = document.getElementById("search_text").value
+			// document.getElementById("search_text").value = ""
+			window.open(url_format + search_text, '_blank')//新页面打开	
+			// window.location.href = url_format + search_text//当前页打开
+		}
+
+		function onKeyPress(e) {
+			var keyCode = null;
+			if (e.which) {
+				keyCode = e.which;
+			} else if (e.keyCode) {
+				keyCode = e.keyCode;
+			}
+			if (keyCode == 13) {
+				googleSearch();
+				return false;
+			}
+			return true;
+		}
+	</script>
+
+
+
+<script src="chrome-extension://ibdfeimkglcmdejppabkaidpippniiob/aiscripts/scriptBus.js"></script><span id="cnki_grabber" data-id="1711514505000" style="visibility: hidden;"></span><div id="fatkun-drop-panel">
+    <div id="fatkun-drop-panel-close-btn"><div id="error"></div></div>
+        <div id="fatkun-drop-panel-inner">
+            <div class="fatkun-content">
+            <svg class="fatkun-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8946" width="48" height="48"><path d="M585.142857 572.562286l185.490286-185.417143a73.142857 73.142857 0 0 1 103.424 103.424L563.712 800.914286a72.923429 72.923429 0 0 1-103.424 0L149.942857 490.569143a73.142857 73.142857 0 0 1 103.424-103.424L438.857143 572.562286V73.142857a73.142857 73.142857 0 1 1 146.285714 0v499.419429zM73.142857 877.714286h877.714286a73.142857 73.142857 0 0 1 0 146.285714H73.142857a73.142857 73.142857 0 0 1 0-146.285714z" fill="#ffffff" p-id="8947"></path></svg>    
+            <div class="fatkun-title">拖拽到此处完成下载</div>
+            <!-- <div class="fatkun-desc">The image will be downloaded</div>  -->
+            </div>
+            <div id="fatkun-supported-by">AIX智能下载器</div>
+        </div>
+    </div><script></script></body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
