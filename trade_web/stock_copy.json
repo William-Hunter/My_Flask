@@ -1,0 +1,50 @@
+{
+    "002524": {
+        "stock_id": "002524",
+        "stock_name": "光正眼科",
+        "extrem_high": 8.47,
+        "extremly_low": 6.01
+    },
+    "603069": {
+        "stock_id": "603069",
+        "stock_name": "海汽集团",
+        "extrem_high": 30.5,
+        "extremly_low": 20.66
+    },
+    "002156": {
+        "stock_id": "002156",
+        "stock_name": "通富微电",
+        "extrem_high": 20.18,
+        "extremly_low": 14.05
+    },
+    "300948": {
+        "stock_id": "300948",
+        "stock_name": "冠中生态",
+        "extrem_high": 17.19,
+        "extremly_low": 12.14
+    },
+    "002139": {
+        "stock_id": "002139",
+        "stock_name": "拓邦股份",
+        "extrem_high": 13.5,
+        "extremly_low": 10
+    },
+    "002057": {
+        "stock_id": "002057",
+        "stock_name": "中钢天源",
+        "extrem_high": 12,
+        "extremly_low": 9.08
+    },
+    "601208": {
+        "stock_id": "601208",
+        "stock_name": "东材科技",
+        "extrem_high": 13.6,
+        "extremly_low": 9.88
+    },
+    "600268": {
+        "stock_id": "600268",
+        "stock_name": "国电南自",
+        "extrem_high": 9,
+        "extremly_low": 7.2
+    }
+}
