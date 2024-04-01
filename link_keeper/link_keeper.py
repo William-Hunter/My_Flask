@@ -55,7 +55,7 @@ LIST = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
 def pickupNumber():
     # prints a random value from the list
     string=""
-    for i in range(0,25):
+    for i in range(0,15):
         string=string+random.choice(LIST)
         
     print(string)
