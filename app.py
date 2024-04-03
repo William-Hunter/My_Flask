@@ -54,6 +54,15 @@ def link_keeper_add():
     """
     url = request.args.get('url', '')
     title = request.args.get('title', '')
+    if title is None or "" == title:
+        current_app.logger.info('查询title')
+        title=link_keeper.getTitle(url)
+    else:
+        current_app.logger.info('自带title')
+
+    # print("title:",title)
+    # print("url:",url)
+    current_app.logger.info('url:%s title:%s', url,title)
 
     link_keeper.add(url,title)
 

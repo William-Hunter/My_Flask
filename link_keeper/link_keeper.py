@@ -5,16 +5,20 @@ import sys
 import imp
 import json
 from flask import current_app
+from flask import Flask
 import requests
 from bs4 import BeautifulSoup
 import random
  
-
-
 imp.reload(sys)
 
 
 HTML_PATH="/opt/workspace/flask/static/link_keeper.html"
+
+proxies = {
+   'http': 'http://127.0.0.1:7890',
+   'https': 'http://127.0.0.1:7890',
+}
 
 
 Headers={
@@ -23,7 +27,7 @@ Headers={
     }
 
 def getHtml(url):
-    response=requests.get(url=url,headers=Headers)
+    response=requests.get(url=url,headers=Headers,proxies=proxies)
     result=""
     print(response)
     if 200==response.status_code:
@@ -32,15 +36,12 @@ def getHtml(url):
     # print(result)
     return result
 
-
 def saveLinkList(htmlCode):
     with open(HTML_PATH, 'w') as file:
         file.write(str(htmlCode))
 
 
-
 def getLinkList():
-
     htmlcode=None
     with open(HTML_PATH, 'r') as file:
         htmlcode=file.read()
@@ -62,9 +63,13 @@ def pickupNumber():
     return string
 
 
-def add(url,title):
-    print("url:",url)
+def getTitle(url):
+    soup = BeautifulSoup(getHtml(url), 'html.parser')
+    title=soup.title.text
+    return title
 
+
+def add(url,title):
     htmlSoup=getLinkList()
     body=htmlSoup.select_one("body div#links")
 
