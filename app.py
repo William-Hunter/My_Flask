@@ -54,6 +54,10 @@ def link_keeper_add():
     """
     url = request.args.get('url', '')
     title = request.args.get('title', '')
+    type = request.args.get('type', '')
+    category = request.args.get('category', '')
+    
+    
     if title is None or "" == title:
         current_app.logger.info('查询title')
         title=link_keeper.getTitle(url)
@@ -64,7 +68,7 @@ def link_keeper_add():
     # print("url:",url)
     current_app.logger.info('url:%s title:%s', url,title)
 
-    link_keeper.add(url,title)
+    link_keeper.add(url,title,type,category)
 
     result={}
     result['code']=200
@@ -80,7 +84,9 @@ def link_keeper_delete():
     """
 
     id = request.args.get('id', '')
-    link_keeper.delete(id)
+    type = request.args.get('type', '')
+    link_keeper.delete(id,type)
+    
 
     result={}
     result['code']=200

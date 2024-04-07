@@ -13,7 +13,7 @@ import random
 imp.reload(sys)
 
 
-HTML_PATH="/opt/workspace/flask/static/link_keeper.html"
+
 
 proxies = {
    'http': 'http://127.0.0.1:7890',
@@ -36,14 +36,17 @@ def getHtml(url):
     # print(result)
     return result
 
-def saveLinkList(htmlCode):
-    with open(HTML_PATH, 'w') as file:
+def saveLinkList(htmlCode,html_path):
+    with open(html_path, 'w') as file:
         file.write(str(htmlCode))
 
 
-def getLinkList():
+def getLinkList(html_path):
+    if html_path is None or ""==html_path:
+        pass
+
     htmlcode=None
-    with open(HTML_PATH, 'r') as file:
+    with open(html_path, 'r') as file:
         htmlcode=file.read()
 
     soup = BeautifulSoup(htmlcode, 'html.parser')
@@ -53,10 +56,10 @@ def getLinkList():
 LIST = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' ]
 
-def pickupNumber():
+def pickupNumber(length=15):
     # prints a random value from the list
     string=""
-    for i in range(0,15):
+    for i in range(0,length):
         string=string+random.choice(LIST)
         
     print(string)
@@ -69,11 +72,17 @@ def getTitle(url):
     return title
 
 
-def add(url,title):
-    htmlSoup=getLinkList()
-    body=htmlSoup.select_one("body div#links")
+def add(url,title,type,category):
+    html_path=selectType(type)
+    htmlSoup=getLinkList(html_path)
 
-    id=pickupNumber()
+    css_query="body div#links"
+    if category is not None and "" != category:
+        css_query=css_query+" div#"+category
+    
+    body=htmlSoup.select_one(css_query)
+
+    id=pickupNumber(20)
 
     new_div = htmlSoup.new_tag("div",id=id) 
     new_div['class']='link'
@@ -92,18 +101,26 @@ def add(url,title):
 
     body.append(new_div) 
 
-    saveLinkList(htmlSoup)
+    saveLinkList(htmlSoup,html_path)
 
 
-def delete(id):
-    htmlSoup=getLinkList()
+def delete(id,type):
+    html_path=selectType(type)
+    htmlSoup=getLinkList(html_path)
     
     div=htmlSoup.select_one("body div#"+id)
     if div is not None:
         div.decompose()
-        saveLinkList(htmlSoup)
+        saveLinkList(htmlSoup,html_path)
 
+
+def selectType(type):
+    if type is not None and 'ppp'==type:
+        HTML_PATH="/opt/workspace/flask/static/ppp.html"
+    else:
+        HTML_PATH="/opt/workspace/flask/static/link_keeper.html"
+    return HTML_PATH
 
 
 if __name__ == "__main__":
-    pickupNumber()
+    pickupNumber(20)

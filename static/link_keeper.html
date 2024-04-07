@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<base href="." target="_blank">
-
-    <title>链接保存箱</title>
-    <script src="./axios.min.js"></script>
-    <style>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+<base href="." target="_blank"/>
+<title>链接保存箱</title>
+<script src="./axios.min.js"></script>
+<style>
         body {
             background-color: #75878A;
         }
@@ -25,6 +23,23 @@
             -moz-border-radius: 25px;
             /* 老的 Firefox */
             float: left;
+        }
+
+        .oneline {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .bookmarks {
+            margin-bottom: 100px;
+            display: block;
+        }
+
+        .row {
+            /* display: block; */
+            /* display: flex; */
+            display: inline-block;
+            /* display: flow-root; */
         }
 
         div#links a {
@@ -66,323 +81,301 @@
         }
     </style>
 </head>
-
 <body>
-    <div id="searchBar">
-        <input class="iinput inlinne" id="search" name="search" onkeydown="return onKeyPress(event)"
-            placeholder="请输入......" type="text" />
-        <br />
-        <button class="butt inlinne" onclick="search('google')" type="button">
+<div id="searchBar">
+<input class="iinput inlinne" id="search" name="search" onkeydown="return onKeyPress(event)" placeholder="请输入......" type="text"/>
+<br/>
+<button class="butt inlinne" onclick="search('google')" type="button">
             Google
         </button>
-        <button class="butt inlinne" onclick="search('bing')" type="button">
+<button class="butt inlinne" onclick="search('bing')" type="button">
             Bing
         </button>
-        <button class="butt inlinne bilibili-btn" onclick="search('bilibili')" type="button">
+<button class="butt inlinne bilibili-btn" onclick="search('bilibili')" type="button">
             Bilibili
         </button>
-        <button class="butt inlinne youtube-btn" onclick="search('youtube')" type="button">
+<button class="butt inlinne youtube-btn" onclick="search('youtube')" type="button">
             Youtube
         </button>
-        <button class="butt inlinne" onclick="clearSearch()" type="button">
+<button class="butt inlinne" onclick="clearSearch()" type="button">
             清除
         </button>
-    </div>
-    <br />
-    <div id="links">
-        <div class="link" id="Fj1IHXEnZyqartHw777"><a href="http://101.35.218.66:8888/#unread/all">RSS新闻</a><button
-                class="del-btn" onclick="_2delete('Fj1IHXEnZyqartHw777')" type="button">删除</button></div>
-        <div class="link" id="BymXASZ6R29uSyZuwwsd"><a href="https://web.ideanote.cc/">ideanote</a><button
-                class="del-btn" onclick="_2delete('BymXASZ6R29uSyZuwwsd')" type="button">删除</button></div>
-        <div class="link" id="zbtRS91jLest0rFxnoF1"><a
-                href="https://app.any.do/tasks/next-seven-days?d=anydo://anydo?action=tasktab">anydo</a><button
-                class="del-btn" onclick="_2delete('zbtRS91jLest0rFxnoF1')" type="button">删除</button></div>
-        <div class="link" id="PHjh6rWbhIszTngXpUo"><a href="https://t.bilibili.com/?tab=video">B站动态</a><button
-                class="del-btn" onclick="_2delete('PHjh6rWbhIszTngXpUo')" type="button">删除</button></div>
-        <div class="link" id="BmbnrYY7rSCitSwurs6F"><a href="https://www.youtube.com/feed/subscriptions">油管订阅</a><button
-                class="del-btn" onclick="_2delete('BmbnrYY7rSCitSwurs6F')" type="button">删除</button></div>
-        <div class="link" id="bxFIOHD0IGmzO0DJlGg"><a href="http://101.35.218.66:5244/">Alist</a><button class="del-btn"
-                onclick="_2delete('bxFIOHD0IGmzO0DJlGg')" type="button">删除</button></div>
-        <div class="link" id="xiaeOBCUgFptqRG"><a href="https://wannianrili.bmcx.com/">万年历</a><button class="del-btn"
-                onclick="_2delete('xiaeOBCUgFptqRG')" type="button">删除</button></div>
-        <div class="link" id="PlIsQUpPYi2wKZdA1Bbm"><a href="https://www.colamanga.com/manga-nc75457/">绍宋漫画</a><button
-                class="del-btn" onclick="_2delete('PlIsQUpPYi2wKZdA1Bbm')" type="button">删除</button></div>
-        <div class="link" id="mejmZWWOZchuv77puMY"><a
-                href="https://store.epicgames.com/en-US/free-games">epic免费游戏</a><button class="del-btn"
-                onclick="_2delete('mejmZWWOZchuv77puMY')" type="button">删除</button></div>
-        <div class="link" id="IlyRLk7eSREKVm3BHdMp"><a
-                href="https://zh.wikipedia.org/zh-cn/2024%E5%B9%B4">2024年大事</a><button class="del-btn"
-                onclick="_2delete('IlyRLk7eSREKVm3BHdMp')" type="button">删除</button></div>
-        <div class="link" id="DB1pjvF1p99MkyWkAAa2"><a
-                href="https://data.eastmoney.com/cjsj/globalRate.html">全球利率</a><button class="del-btn"
-                onclick="_2delete('DB1pjvF1p99MkyWkAAa2')" type="button">删除</button></div>
-        <div class="link" id="LeAYy45Vwd7sgLDXmrg"><a
-                href="https://www.google.com/search?q=redis+%E5%A4%9A%E7%BA%BF%E7%A8%8Bio&amp;newwindow=1&amp;sca_esv=576e4e7685de117a&amp;sca_upv=1&amp;sxsrf=ACQVn0_egoQ5rSqYQgGORxK-I8tBO4u3Gw%3A1711934503553&amp;ei=JwwKZru3IdeH1e8Ps8GAwAw&amp;ved=0ahUKEwj75tn_7J-FAxXXQ_UHHbMgAMgQ4dUDCBA&amp;uact=5&amp;oq=redis+%E5%A4%9A%E7%BA%BF%E7%A8%8Bio&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiEXJlZGlzIOWkmue6v-eoi2lvMgUQABiABEi2H1DIAljXG3ABeAGQAQCYAbsBoAHICqoBBDEuMTG4AQPIAQD4AQGYAg2gAvYKwgIKEAAYRxjWBBiwA8ICChAjGIAEGIoFGCfCAgQQIxgnwgIKEAAYgAQYigUYQ8ICBxAAGIAEGAyYAwCIBgGQBgqSBwQyLjExoAeEFg&amp;sclient=gws-wiz-serp">redis
-                多线程io</a><button class="del-btn" onclick="_2delete('LeAYy45Vwd7sgLDXmrg')" type="button">删除</button>
-        </div>
-        <div class="link" id="WKhs1eFNJG7cd21tjvuV"><a
-                href="https://www.youtube.com/@ByteByteGo/community">ByteByteGo</a><button class="del-btn"
-                onclick="_2delete('WKhs1eFNJG7cd21tjvuV')" type="button">删除</button></div>
-        <div class="link" id="rw6uYcPou03NsmYF3do"><a href="http://101.35.218.66:10880/">Gogs</a><button class="del-btn"
-                onclick="_2delete('rw6uYcPou03NsmYF3do')" type="button">删除</button></div>
-        <div class="link" id="HXGkcjf0njtygoCUsvhc"><a href="http://101.35.218.66:5700/login">青龙面板</a><button
-                class="del-btn" onclick="_2delete('HXGkcjf0njtygoCUsvhc')" type="button">删除</button></div>
-        <div class="link" id="w9TJ53YcZSHF94LNRveS"><a href="http://101.35.218.66:8787/">IT工具箱</a><button
-                class="del-btn" onclick="_2delete('w9TJ53YcZSHF94LNRveS')" type="button">删除</button></div>
-        <div class="link" id="aQuulZjOjEMe0B9Hu23a"><a href="http://101.35.218.66:42320/ff4ab60e96">1Panel</a><button
-                class="del-btn" onclick="_2delete('aQuulZjOjEMe0B9Hu23a')" type="button">删除</button></div>
-        <div class="link" id="IvtU8AZ4rkNsPmI3WuwW"><a href="http://101.35.218.66:4000/">wewe-rss</a><button
-                class="del-btn" onclick="_2delete('IvtU8AZ4rkNsPmI3WuwW')" type="button">删除</button></div>
-        <div class="link" id="SlKxxqLzfPdveBYqwYfKbpjvJ"><a href="http://101.35.218.66:9000/#!/auth">docker管理</a><button
-                class="del-btn" onclick="_2delete('SlKxxqLzfPdveBYqwYfKbpjvJ')" type="button">删除</button></div>
-        <div class="link" id="xSkhnFsBbxqBnAx"><a href="http://101.35.218.66:8677/trade_web/">炒股辅助器</a><button
-                class="del-btn" onclick="_2delete('xSkhnFsBbxqBnAx')" type="button">删除</button></div>
-        <div class="link" id="psSWIhWdlsdPLwE"><a
-                href="http://101.35.218.66:8677/api/static/yt-dlp.html">下载视频</a><button class="del-btn"
-                onclick="_2delete('psSWIhWdlsdPLwE')" type="button">删除</button></div>
-        <div class="link" id="ZvVpsuzlpPEGrwF"><a href="http://101.35.218.66:8083/login?next=%2F">书库</a><button
-                class="del-btn" onclick="_2delete('ZvVpsuzlpPEGrwF')" type="button">删除</button></div>
-        <div class="link" id="TrdqdofuFBKUEbi"><a href="http://101.35.218.66:7778/gui/">文件同步</a><button class="del-btn"
-                onclick="_2delete('TrdqdofuFBKUEbi')" type="button">删除</button></div>
-        <div class="link" id="JgFySYiIdrGMUWG"><a href="http://101.35.218.66:7500/static/#/">内网穿透</a><button
-                class="del-btn" onclick="_2delete('JgFySYiIdrGMUWG')" type="button">删除</button></div>
-        <div class="link" id="YwhLMstWBcHkHdJ"><a href="https://web.telegram.org/a/">Telegram</a><button class="del-btn"
-                onclick="_2delete('YwhLMstWBcHkHdJ')" type="button">删除</button></div>
-        <div class="link" id="YJKAPLrGrTRGPKb"><a href="https://hub.grapps.cn/marketplace">云应用商店</a><button
-                class="del-btn" onclick="_2delete('YJKAPLrGrTRGPKb')" type="button">删除</button></div>
-        <div class="link" id="EzjfpFVvHnXjTNx"><a href="https://www.google.com.hk/alerts?hl=zh-cn">谷歌快讯</a><button
-                class="del-btn" onclick="_2delete('EzjfpFVvHnXjTNx')" type="button">删除</button></div>
-        <div class="link" id="BJLRAYnAsDgjiRj"><a href="https://chat-e2ee-2.azurewebsites.net/">chat-e2ee</a><button
-                class="del-btn" onclick="_2delete('BJLRAYnAsDgjiRj')" type="button">删除</button></div>
-        <div class="link" id="tOXwhFwxvbcYMOQ"><a href="https://www.processon.com/">ProcessOn</a><button class="del-btn"
-                onclick="_2delete('tOXwhFwxvbcYMOQ')" type="button">删除</button></div>
-        <div class="link" id="gYCYqidjjlKUUoB"><a href="https://www.coingecko.com/zh/portfolio">coingecko</a><button
-                class="del-btn" onclick="_2delete('gYCYqidjjlKUUoB')" type="button">删除</button></div>
-        <div class="link" id="CSzjORgnAaumzvZ"><a href="https://wglh.com/">乌龟量化</a><button class="del-btn"
-                onclick="_2delete('CSzjORgnAaumzvZ')" type="button">删除</button></div>
-        <div class="link" id="cCJgcGVApwXZapp"><a href="https://quote.cngold.org/gjs/swhj_zghj.html">中国黄金</a><button
-                class="del-btn" onclick="_2delete('cCJgcGVApwXZapp')" type="button">删除</button></div>
-        <div class="link" id="AXSJIfYwRgzLHDT"><a href="https://quote.cngold.org/gjs/gjhj_xhhj.html">现货黄金</a><button
-                class="del-btn" onclick="_2delete('AXSJIfYwRgzLHDT')" type="button">删除</button></div>
-        <div class="link" id="INQfzLXDqVEeEsi"><a href="https://eniu.com/">亿牛网</a><button class="del-btn"
-                onclick="_2delete('INQfzLXDqVEeEsi')" type="button">删除</button></div>
-        <div class="link" id="tyqnzSNpLxBymVl"><a href="http://101.35.218.66:7777/gui/">Sync Lighthouse</a><button
-                class="del-btn" onclick="_2delete('tyqnzSNpLxBymVl')" type="button">删除</button></div>
-        <div class="link" id="JdzzqgbhzZGhWog"><a href="https://drive.google.com/drive/">谷歌drive</a><button
-                class="del-btn" onclick="_2delete('JdzzqgbhzZGhWog')" type="button">删除</button></div>
-        <div class="link" id="KJDLgKyFyskYXrz"><a href="https://mega.nz/fm/KPph3Ioa">Mega云盘</a><button class="del-btn"
-                onclick="_2delete('KJDLgKyFyskYXrz')" type="button">删除</button></div>
-        <div class="link" id="vUzdHVKBETxGkKi"><a
-                href="https://www.google.com/maps/@34.1966531,113.7035599,76625a,35y,34.23t/data=!3m1!1e3">谷歌地图</a><button
-                class="del-btn" onclick="_2delete('vUzdHVKBETxGkKi')" type="button">删除</button></div>
-        <div class="link" id="AqxELxJMBlcLUcH"><a
-                href="https://map.baidu.com/@12657647.671856025,4108094.3060110407,15z,50t">百度地图</a><button
-                class="del-btn" onclick="_2delete('AqxELxJMBlcLUcH')" type="button">删除</button></div>
-        <div class="link" id="LCpypeiBjnnrUcJ"><a href="https://ditu.amap.com/">高德地图</a><button class="del-btn"
-                onclick="_2delete('LCpypeiBjnnrUcJ')" type="button">删除</button></div>
-        <div class="link" id="RzDOOFOcemOySLQ"><a href="https://www.worldtimezone.com/index_cn.php">时钟地图</a><button
-                class="del-btn" onclick="_2delete('RzDOOFOcemOySLQ')" type="button">删除</button></div>
-        <div class="link" id="vRLjvLfaiwZrVUb"><a
-                href="https://web.postman.co/workspace/My-Workspace~a42025e0-3762-4097-8428-c64d6ec63dae/request/1858867-5f160bfb-2c85-4394-bc68-5070f0af0d44?tab=body">Postman</a><button
-                class="del-btn" onclick="_2delete('vRLjvLfaiwZrVUb')" type="button">删除</button></div>
-        <div class="link" id="ClFgPkbKqQOtDsB"><a href="https://chat.openai.com/chat">ChatGPT</a><button class="del-btn"
-                onclick="_2delete('ClFgPkbKqQOtDsB')" type="button">删除</button></div>
-        <div class="link" id="GIdmMbqAnanXNVQ"><a href="https://devv.ai/zh">Devv.ai</a><button class="del-btn"
-                onclick="_2delete('GIdmMbqAnanXNVQ')" type="button">删除</button></div>
-        <div class="link" id="bDuIIRvUVeefGOg"><a href="https://www.phind.com/search?home=true">phind.AI</a><button
-                class="del-btn" onclick="_2delete('bDuIIRvUVeefGOg')" type="button">删除</button></div>
-        <div class="link" id="KSQSkbpKXjgoVWV"><a href="https://aierplane.com/">机场</a><button class="del-btn"
-                onclick="_2delete('KSQSkbpKXjgoVWV')" type="button">删除</button></div>
-        <div class="link" id="ZWQLwcONZbVkgqr"><a href="https://www.aicoin.com/">aicoin</a><button class="del-btn"
-                onclick="_2delete('ZWQLwcONZbVkgqr')" type="button">删除</button></div>
-        <div class="link" id="EwwgBSFRHymVBhg"><a href="https://coinmarketcap.com/zh/">coinmarketcap</a><button
-                class="del-btn" onclick="_2delete('EwwgBSFRHymVBhg')" type="button">删除</button></div>
-        <div class="link" id="kcMGQoBoHGpsCqW"><a
-                href="https://www.paypal.com/myaccount/summary?intl=0">paypal</a><button class="del-btn"
-                onclick="_2delete('kcMGQoBoHGpsCqW')" type="button">删除</button></div>
-        <div class="link" id="vzlmOieDKcqeubk"><a href="https://www.szse.cn/aboutus/calendar/index.html">交易日历</a><button
-                class="del-btn" onclick="_2delete('vzlmOieDKcqeubk')" type="button">删除</button></div>
-        <div class="link" id="HPjJWWsrrCjsmHy"><a href="https://translate.google.com/">谷歌翻译</a><button class="del-btn"
-                onclick="_2delete('HPjJWWsrrCjsmHy')" type="button">删除</button></div>
-        <div class="link" id="ZbhvzpPDIwWyJIs"><a href="https://www.12306.cn/index/index.html">12306</a><button
-                class="del-btn" onclick="_2delete('ZbhvzpPDIwWyJIs')" type="button">删除</button></div>
-        <div class="link" id="RxHqNNFiSGXZggG"><a href="https://github.com/William-Hunter">My Github</a><button
-                class="del-btn" onclick="_2delete('RxHqNNFiSGXZggG')" type="button">删除</button></div>
-        <div class="link" id="vTPZoZnBRVSMyAa"><a href="https://www.icloud.com/">iCloud</a><button class="del-btn"
-                onclick="_2delete('vTPZoZnBRVSMyAa')" type="button">删除</button></div>
-        <div class="link" id="LTHRLaKPivRPVhH"><a
-                href="https://github.com/Cactus-proj/A-Philosophy-of-Software-Design-zh/tree/main">软件设计的哲学</a><button
-                class="del-btn" onclick="_2delete('LTHRLaKPivRPVhH')" type="button">删除</button></div>
-        <div class="link" id="wprbhCTvrUnqEup"><a
-                href="http://m.yushandysg.com/col.jsp?id=114&amp;checkWxLogin=true&amp;openId=x5RxXWAMFwE0NRA1K%2Fr8pWgZFY11iJRcZqEyniptTzM%3D&amp;secondAuth=true&amp;appId=wx50775cad5d08d7ad">免费电影</a><button
-                class="del-btn" onclick="_2delete('wprbhCTvrUnqEup')" type="button">删除</button></div>
-        <div class="link" id="PRfvuJAaDVWJjZh"><a href="http://101.35.218.66:8485/">Moodist</a><button class="del-btn"
-                onclick="_2delete('PRfvuJAaDVWJjZh')" type="button">删除</button></div>
-        <div class="link" id="GmNuLuXhbbNKTlz"><a href="https://fs.blog/second-order-thinking/">二阶思维</a><button
-                class="del-btn" onclick="_2delete('GmNuLuXhbbNKTlz')" type="button">删除</button></div>
-        <div class="link" id="ZeflhYlAQdEimvp"><a
-                href="https://www.zhihu.com/tardis/zm/art/442486331?source_id=1003">Prompt Learning 超强入门教程</a><button
-                class="del-btn" onclick="_2delete('ZeflhYlAQdEimvp')" type="button">删除</button></div>
-        <div class="link" id="WtCHhwioXAyTWYl"><a
-                href="https://zhuanlan.zhihu.com/p/399295895?utm_id=0">NLP新宠——浅谈Prompt的前世今生</a><button class="del-btn"
-                onclick="_2delete('WtCHhwioXAyTWYl')" type="button">删除</button></div>
-        <div class="link" id="wxKRWkmhnQLystD"><a
-                href="https://zhuanlan.zhihu.com/p/636270877?utm_id=0">从零开始训练大模型</a><button class="del-btn"
-                onclick="_2delete('wxKRWkmhnQLystD')" type="button">删除</button></div>
-        <div class="link" id="dFhgTQvXPHVPkel"><a
-                href="https://www.google.com/search?q=LLM%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83&amp;newwindow=1&amp;sca_esv=577535786&amp;biw=1502&amp;bih=913&amp;ei=k-Y9Zf3mJq-P2roP1ZSg4A0&amp;ved=0ahUKEwi9_Mi8vJqCAxWvh1YBHVUKCNwQ4dUDCBA&amp;uact=5&amp;oq=LLM%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiD0xMTeaooeWei-iuree7gzIFEAAYgARIjSpQ6QdYgyhwAXgAkAEAmAGuAaAB1QaqAQMwLja4AQPIAQD4AQH4AQLCAgoQABhHGNYEGLADwgIGEAAYBxgewgIFEAAYogTiAwQYACBBiAYBkAYK&amp;sclient=gws-wiz-serp">llm模型训练</a><button
-                class="del-btn" onclick="_2delete('dFhgTQvXPHVPkel')" type="button">删除</button></div>
-        <div class="link" id="sTrPDMkIZwujDpu"><a href="https://finchat.io/">金融chat ai</a><button class="del-btn"
-                onclick="_2delete('sTrPDMkIZwujDpu')" type="button">删除</button></div>
-        <div class="link" id="XpxbvSbZylfcThy"><a href="https://www.beebee.ai/">beebee ai</a><button class="del-btn"
-                onclick="_2delete('XpxbvSbZylfcThy')" type="button">删除</button></div>
-        <div class="link" id="EpKUjLpqbSgxwfw"><a
-                href="https://www.tony-bro.com/posts/79505776/index.html">Java异步Http客户端对比测试</a><button class="del-btn"
-                onclick="_2delete('EpKUjLpqbSgxwfw')" type="button">删除</button></div>
-        <div class="link" id="IXfLWKFWKCQnpjM"><a
-                href="https://tech.meituan.com/2016/12/26/data-consistency.html">美团酒店直连产品数据一致性演进</a><button
-                class="del-btn" onclick="_2delete('IXfLWKFWKCQnpjM')" type="button">删除</button></div>
-        <div class="link" id="rpIhGVesrIvgOut"><a href="https://www.jyshare.com/">菜鸟工具</a><button class="del-btn"
-                onclick="_2delete('rpIhGVesrIvgOut')" type="button">删除</button></div>
-        <div class="link" id="mLEoUScXTlPDrZy"><a href="https://tool.hhui.top/">神奇工具箱</a><button class="del-btn"
-                onclick="_2delete('mLEoUScXTlPDrZy')" type="button">删除</button></div>
-        <div class="link" id="tCiRXpphCbFzqUD"><a href="https://tool.lu/">在线工具箱</a><button class="del-btn"
-                onclick="_2delete('tCiRXpphCbFzqUD')" type="button">删除</button></div>
-        <div class="link" id="dITfkAIVtGTBjaG"><a href="http://www.hiencode.com">CTF工具箱</a><button class="del-btn"
-                onclick="_2delete('dITfkAIVtGTBjaG')" type="button">删除</button></div>
-        <div class="link" id="htCSSzYfiOFotxM"><a href="https://tool.oschina.net/">oschina工具箱</a><button class="del-btn"
-                onclick="_2delete('htCSSzYfiOFotxM')" type="button">删除</button></div>
-        <div class="link" id="llexVoTRqwXXuZx"><a href="https://bookfere.com/">书伴</a><button class="del-btn"
-                onclick="_2delete('llexVoTRqwXXuZx')" type="button">删除</button></div>
-        <div class="link" id="ZTVApEEBbCRKmju"><a
-                href="https://github.com/Cactus-proj/A-Philosophy-of-Software-Design-zh/tree/main">软件设计的哲学</a><button
-                class="del-btn" onclick="_2delete('ZTVApEEBbCRKmju')" type="button">删除</button></div>
-        <div class="link" id="HZaTPIRBYsdyGnw"><a
-                href="https://www.google.com/finance/quote/BTC-USD?window=5D">BTC-USD</a><button class="del-btn"
-                onclick="_2delete('HZaTPIRBYsdyGnw')" type="button">删除</button></div>
-        <div class="link" id="cQSMkBwjXiYvGPy"><a
-                href="https://www.google.com/finance/quote/000001:SHA?window=5D">上证五日</a><button class="del-btn"
-                onclick="_2delete('cQSMkBwjXiYvGPy')" type="button">删除</button></div>
-        <div class="link" id="BfpIpKUhGRpuPph"><a href="https://juejin.cn/post/6908271959381901325">一文快速入门 Kotlin 协程 -
-                掘金</a><button class="del-btn" onclick="_2delete('BfpIpKUhGRpuPph')" type="button">删除</button></div>
-        <div class="link" id="BIAQPrsFUqMlXmY"><a href="https://www.zhihu.com/people/xubinlvshi/answers">徐斌 -
-                知乎</a><button class="del-btn" onclick="_2delete('BIAQPrsFUqMlXmY')" type="button">删除</button></div>
-        <div class="link" id="ijXALKoPaqqXwsY"><a href="https://www.zhihu.com/people/simonlee8000/answers">Simonlee8000
-                - 知乎</a><button class="del-btn" onclick="_2delete('ijXALKoPaqqXwsY')" type="button">删除</button></div>
-        <div class="link" id="CpXPRjRyyqxmhDw"><a href="https://www.zhihu.com/people/pureri-yue/answers">pure日月 -
-                知乎</a><button class="del-btn" onclick="_2delete('CpXPRjRyyqxmhDw')" type="button">删除</button></div>
-        <div class="link" id="PtMytppeHPHVGPe"><a href="https://chromewebstore.google.com/">Chrome应用商店</a><button
-                class="del-btn" onclick="_2delete('PtMytppeHPHVGPe')" type="button">删除</button></div>
-        <div class="link" id="qhyghEYBgOxCSXw"><a href="https://aibydoing.com/intro">动手实战人工智能 AI By Doing — 动手实战人工智能 AI
-                By Doing</a><button class="del-btn" onclick="_2delete('qhyghEYBgOxCSXw')" type="button">删除</button>
-        </div>
-        <div class="link" id="nBZAahPhkEiwbDf"><a href="https://www.ggnotes.com/the-best-way-to-get-unstuck/">The best
-                way to get unstuck</a><button class="del-btn" onclick="_2delete('nBZAahPhkEiwbDf')"
-                type="button">删除</button></div>
-        <div class="link" id="nHfHCAfLgkQfCYp"><a
-                href="https://www.google.com/search?q=%E6%AD%A6%E8%A3%85%E6%B5%B7%E5%95%86%E7%9A%84%E4%B9%A6%E7%B1%8D">武装海商的书籍
-                - Google 搜索</a><button class="del-btn" onclick="_2delete('nHfHCAfLgkQfCYp')" type="button">删除</button>
-        </div>
-        <div class="link" id="rQIoyTVQxjUdiVj"><a
-                href="https://www.listennotes.com/zh-hans/podcasts/%E6%97%A5%E8%B0%88%E5%85%AC%E5%9B%AD/vol546-%E5%A5%B9%E5%9C%A8%E6%AF%94%E5%AE%87%E5%AE%99%E6%9B%B4%E8%BF%9C%E7%9A%84%E5%9C%B0%E6%96%B9%E8%BF%BD%E9%80%90%E6%97%A5%E9%A3%9F-v2fY7J95NXh/">vol.546
-                她在比宇宙更远的地方追逐日食 - 日谈公园 (播客) | Listen Notes</a><button class="del-btn"
-                onclick="_2delete('rQIoyTVQxjUdiVj')" type="button">删除</button></div>
-        <div class="link" id="pFSHSzNaxavPSgB"><a href="https://zh.d2l.ai/index.html">《动手学深度学习》 — 动手学深度学习 2.0.0
-                documentation</a><button class="del-btn" onclick="_2delete('pFSHSzNaxavPSgB')" type="button">删除</button>
-        </div>
-        <div class="link" id="qAgdDAFKGeKlzEn"><a
-                href="https://wallstreetcn.com/articles/3709779">黄仁勋“几乎每天用”！Perplexity会是“搜索的未来”吗？ - 华尔街见闻</a><button
-                class="del-btn" onclick="_2delete('qAgdDAFKGeKlzEn')" type="button">删除</button></div>
-        <div class="link" id="mLKYgGdnQHaDVTD"><a href="https://mp.weixin.qq.com/s/B7Z0ROkiBqqxVKkLNR9BxQ">入行 15
-                年，我还是觉得编程很难</a><button class="del-btn" onclick="_2delete('mLKYgGdnQHaDVTD')" type="button">删除</button>
-        </div>
-        <div class="link" id="BraBlLpMmzOLemu"><a href="https://coolshell.cn/articles/21672.html">我做系统架构的一些原则 | 酷 壳 -
-                CoolShell</a><button class="del-btn" onclick="_2delete('BraBlLpMmzOLemu')" type="button">删除</button>
-        </div>
-        <div class="link" id="jCJTgOOwUAciQNE"><a
-                href="https://www.sap.cn/products/technology-platform/cloud-analytics/what-is-business-intelligence.html">什么是商业智能
-                (BI)？| SAP</a><button class="del-btn" onclick="_2delete('jCJTgOOwUAciQNE')" type="button">删除</button>
-        </div>
-        <div class="link" id="TUnINWxuwMlAZka"><a href="https://coolshell.cn/articles/22422.html">是微服务架构不香还是云不香？ | 酷 壳 -
-                CoolShell</a><button class="del-btn" onclick="_2delete('TUnINWxuwMlAZka')" type="button">删除</button>
-        </div>
-        <div class="link" id="NqkMsyLpSlOOgcO"><a href="https://doosho.com/cn/115/11/1/1">第一回　悲太平会员怀旧
-                破寥寂社长贻书|月界旅行|第十一卷|﻿鲁迅全集1938年版|读书</a><button class="del-btn" onclick="_2delete('NqkMsyLpSlOOgcO')"
-                type="button">删除</button></div>
-        <div class="link" id="ZwbEzqdItbSjhBk"><a href="https://coolshell.cn/featured">推荐文章 | 酷 壳 - CoolShell</a><button
-                class="del-btn" onclick="_2delete('ZwbEzqdItbSjhBk')" type="button">删除</button></div>
-        <div class="link" id="QbMfzmunzWRCPmu"><a href="https://coolshell.cn/articles/22398.html">我看ChatGPT: 为啥谷歌掉了千亿美金
-                | 酷 壳 - CoolShell</a><button class="del-btn" onclick="_2delete('QbMfzmunzWRCPmu')"
-                type="button">删除</button></div>
-        <div class="link" id="ZEHfymlAcMxoqMp"><a href="https://coolshell.cn/articles/22367.html">聊聊 nostr 和 审查 | 酷 壳 -
-                CoolShell</a><button class="del-btn" onclick="_2delete('ZEHfymlAcMxoqMp')" type="button">删除</button>
-        </div>
-        <div class="link" id="ExKnPwQFZjgqope"><a
-                href="https://program-think.blogspot.com/2021/03/Computer-Networks-Overview.html">计算机网络通讯的【系统性】扫盲——从“基本概念”到“OSI
-                模型” @ 编程随想的博客</a><button class="del-btn" onclick="_2delete('ExKnPwQFZjgqope')" type="button">删除</button>
-        </div>
-        <div class="link" id="yQywxCyrdwpVwju"><a
-                href="https://open.163.com/newview/movie/free?pid=ZIAL7EHOQ&amp;mid=RIAL7EHPF">那些颠覆你价值观的成长技巧！堪比人生外挂！【歌白】-网易公开课</a><button
-                class="del-btn" onclick="_2delete('yQywxCyrdwpVwju')" type="button">删除</button></div>
-        <div class="link" id="YWwpoiLemEirpKv"><a
-                href="https://www.google.com/search?q=java%E7%81%AB%E7%84%B0%E5%9B%BE&amp;rlz=1CDGOYI_enCN1067CN1068&amp;oq=java%E7%81%AB%E7%84%B0%E5%9B%BE&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgMGIAEMgkIAhAAGAwYgAQyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYBRge0gEINDQzNGowajSoAgCwAgA&amp;hl=zh-CN&amp;sourceid=chrome-mobile&amp;ie=UTF-8">java火焰图
-                - Google 搜索</a><button class="del-btn" onclick="_2delete('YWwpoiLemEirpKv')" type="button">删除</button>
-        </div>
-        <div class="link" id="kzTATECBOPGeTqD"><a
-                href="https://www.liaoxuefeng.com/article/1569797590482976">一文搞懂NFT分类与实现原理 - 廖雪峰的官方网站</a><button
-                class="del-btn" onclick="_2delete('kzTATECBOPGeTqD')" type="button">删除</button></div>
-        <div class="link" id="aUPaeASxgCaYbmJ"><a href="https://www.liaoxuefeng.com/wiki/1207298049439968">区块链教程 -
-                廖雪峰的官方网站</a><button class="del-btn" onclick="_2delete('aUPaeASxgCaYbmJ')" type="button">删除</button>
-        </div>
-        <div class="link" id="IkpVRmopUCkAWPV"><a
-                href="https://crifan.github.io/crawl_your_data_spider_technology/website/">前言 · 爬取你要的数据：爬虫技术</a><button
-                class="del-btn" onclick="_2delete('IkpVRmopUCkAWPV')" type="button">删除</button></div>
-        <div class="link" id="IVqtXkoQkvchyqB"><a href="https://easylang.dev/apps/tutorial_mcarlo.html">The Law of Large
-                Numbers</a><button class="del-btn" onclick="_2delete('IVqtXkoQkvchyqB')" type="button">删除</button></div>
-        <div class="link" id="aRCxdGIGclIoGAm"><a
-                href="https://www.spiked-online.com/2023/12/28/why-are-the-elites-suddenly-so-terrified-about-ai/">Why
-                are the elites suddenly so terrified about AI? - spiked</a><button class="del-btn"
-                onclick="_2delete('aRCxdGIGclIoGAm')" type="button">删除</button></div>
-        <div class="link" id="KalmPMdtsnIeAhp"><a
-                href="https://www.bentoml.com/blog/navigating-the-world-of-large-language-models">Navigating the World
-                of Large Language Models</a><button class="del-btn" onclick="_2delete('KalmPMdtsnIeAhp')"
-                type="button">删除</button></div>
-        <div class="link" id="WqHYrnWbRJCoStG"><a href="https://rishad.substack.com/p/the-future-of-work">The Future of
-                Work - by Rishad Tobaccowala</a><button class="del-btn" onclick="_2delete('WqHYrnWbRJCoStG')"
-                type="button">删除</button></div>
-        <div class="link" id="GGZSQmVigPvpdeT"><a href="https://book.kotlincn.net/text/home.html">文档 · Kotlin 官方文档
-                中文版</a><button class="del-btn" onclick="_2delete('GGZSQmVigPvpdeT')" type="button">删除</button></div>
-        <div class="link" id="UdGhNGItdeEvKAb"><a href="https://www.google.com/finance/quote/USD-CNY?window=5D">USD/CNY
-                Currency Exchange Rate &amp; News - Google Finance</a><button class="del-btn"
-                onclick="_2delete('UdGhNGItdeEvKAb')" type="button">删除</button></div>
-        <div class="link" id="YUcjUbGgMmGjlur"><a href="https://www.ahhhhfs.com/">ahhhhfs - A姐分享</a><button
-                class="del-btn" onclick="_2delete('YUcjUbGgMmGjlur')" type="button">删除</button></div>
-        <div class="link" id="SkMCfaBAvkeyaTx"><a href="https://laosheng.top/">老生常谈 | Laosheng.top</a><button
-                class="del-btn" onclick="_2delete('SkMCfaBAvkeyaTx')" type="button">删除</button></div>
-        <div class="link" id="SlBethbgjOqBQGZ"><a href="https://www.honga.net/totalwar/index.php?encode=zhcn">全面战争 :
+</div>
+<br/>
+<div id="links">
+<div class="row" id="Daily">
+<h3>Daily</h3>
+<div class="link" id="zbtRS91jLest0rFxnoF1"><a href="https://app.any.do/tasks/next-seven-days?d=anydo://anydo?action=tasktab">anydo</a><button class="del-btn" onclick="_2delete('zbtRS91jLest0rFxnoF1')" type="button">删除</button></div>
+<div class="link" id="PHjh6rWbhIszTngXpUo"><a href="https://t.bilibili.com/?tab=video">B站动态</a><button class="del-btn" onclick="_2delete('PHjh6rWbhIszTngXpUo')" type="button">删除</button></div>
+<div class="link" id="BmbnrYY7rSCitSwurs6F"><a href="https://www.youtube.com/feed/subscriptions">油管订阅</a><button class="del-btn" onclick="_2delete('BmbnrYY7rSCitSwurs6F')" type="button">删除</button></div>
+<div class="link" id="Fj1IHXEnZyqartHw777"><a href="http://101.35.218.66:8888/#unread/all">RSS新闻</a><button class="del-btn" onclick="_2delete('Fj1IHXEnZyqartHw777')" type="button">删除</button></div>
+<div class="link" id="xiaeOBCUgFptqRG"><a href="https://wannianrili.bmcx.com/">万年历</a><button class="del-btn" onclick="_2delete('xiaeOBCUgFptqRG')" type="button">删除</button></div>
+<div class="link" id="PlIsQUpPYi2wKZdA1Bbm"><a href="https://www.colamanga.com/manga-nc75457/">绍宋漫画</a><button class="del-btn" onclick="_2delete('PlIsQUpPYi2wKZdA1Bbm')" type="button">删除</button></div>
+<div class="link" id="EzjfpFVvHnXjTNx"><a href="https://www.google.com.hk/alerts?hl=zh-cn">谷歌快讯</a><button class="del-btn" onclick="_2delete('EzjfpFVvHnXjTNx')" type="button">删除</button></div>
+<div class="link" id="mejmZWWOZchuv77puMY"><a href="https://store.epicgames.com/en-US/free-games">epic免费游戏</a><button class="del-btn" onclick="_2delete('mejmZWWOZchuv77puMY')" type="button">删除</button></div>
+<div class="link" id="IlyRLk7eSREKVm3BHdMp"><a href="https://zh.wikipedia.org/zh-cn/2024%E5%B9%B4">2024年大事</a><button class="del-btn" onclick="_2delete('IlyRLk7eSREKVm3BHdMp')" type="button">删除</button></div>
+<div class="link" id="ZwbEzqdItbSjhBk"><a href="https://coolshell.cn/featured">推荐文章 | 酷 壳 -
+                    CoolShell</a><button class="del-btn" onclick="_2delete('ZwbEzqdItbSjhBk')" type="button">删除</button>
+</div>
+<div class="link" id="wprbhCTvrUnqEup"><a href="http://m.yushandysg.com/col.jsp?id=114&amp;checkWxLogin=true&amp;openId=x5RxXWAMFwE0NRA1K%2Fr8pWgZFY11iJRcZqEyniptTzM%3D&amp;secondAuth=true&amp;appId=wx50775cad5d08d7ad">免费电影</a><button class="del-btn" onclick="_2delete('wprbhCTvrUnqEup')" type="button">删除</button></div>
+<div class="link" id="BIAQPrsFUqMlXmY"><a href="https://www.zhihu.com/people/xubinlvshi/answers">徐斌 -
+                    知乎</a><button class="del-btn" onclick="_2delete('BIAQPrsFUqMlXmY')" type="button">删除</button></div>
+<div class="link" id="ijXALKoPaqqXwsY"><a href="https://www.zhihu.com/people/simonlee8000/answers">Simonlee8000
+                    - 知乎</a><button class="del-btn" onclick="_2delete('ijXALKoPaqqXwsY')" type="button">删除</button>
+</div>
+<div class="link" id="CpXPRjRyyqxmhDw"><a href="https://www.zhihu.com/people/pureri-yue/answers">pure日月 -
+                    知乎</a><button class="del-btn" onclick="_2delete('CpXPRjRyyqxmhDw')" type="button">删除</button></div>
+</div>
+<div class="row" id="Finance">
+<h3>Finance</h3>
+<div class="link" id="gYCYqidjjlKUUoB"><a href="https://www.coingecko.com/zh/portfolio">coingecko</a><button class="del-btn" onclick="_2delete('gYCYqidjjlKUUoB')" type="button">删除</button></div>
+<div class="link" id="CSzjORgnAaumzvZ"><a href="https://wglh.com/">乌龟量化</a><button class="del-btn" onclick="_2delete('CSzjORgnAaumzvZ')" type="button">删除</button></div>
+<div class="link" id="INQfzLXDqVEeEsi"><a href="https://eniu.com/">亿牛网</a><button class="del-btn" onclick="_2delete('INQfzLXDqVEeEsi')" type="button">删除</button></div>
+<div class="link" id="EwwgBSFRHymVBhg"><a href="https://coinmarketcap.com/zh/">coinmarketcap</a><button class="del-btn" onclick="_2delete('EwwgBSFRHymVBhg')" type="button">删除</button></div>
+<div class="link" id="ZWQLwcONZbVkgqr"><a href="https://www.aicoin.com/">aicoin</a><button class="del-btn" onclick="_2delete('ZWQLwcONZbVkgqr')" type="button">删除</button></div>
+<div class="link" id="HZaTPIRBYsdyGnw"><a href="https://www.google.com/finance/quote/BTC-USD?window=5D">BTC-USD</a><button class="del-btn" onclick="_2delete('HZaTPIRBYsdyGnw')" type="button">删除</button></div>
+<div class="link" id="cQSMkBwjXiYvGPy"><a href="https://www.google.com/finance/quote/000001:SHA?window=5D">上证五日</a><button class="del-btn" onclick="_2delete('cQSMkBwjXiYvGPy')" type="button">删除</button></div>
+<div class="link" id="UdGhNGItdeEvKAb"><a href="https://www.google.com/finance/quote/USD-CNY?window=5D">USD/CNY
+                    Currency Exchange Rate &amp; News - Google Finance</a><button class="del-btn" onclick="_2delete('UdGhNGItdeEvKAb')" type="button">删除</button></div>
+<div class="link" id="DB1pjvF1p99MkyWkAAa2"><a href="https://data.eastmoney.com/cjsj/globalRate.html">全球利率</a><button class="del-btn" onclick="_2delete('DB1pjvF1p99MkyWkAAa2')" type="button">删除</button></div>
+<div class="link" id="vzlmOieDKcqeubk"><a href="https://www.szse.cn/aboutus/calendar/index.html">交易日历</a><button class="del-btn" onclick="_2delete('vzlmOieDKcqeubk')" type="button">删除</button></div>
+<div class="link" id="cCJgcGVApwXZapp"><a href="https://quote.cngold.org/gjs/swhj_zghj.html">中国黄金</a><button class="del-btn" onclick="_2delete('cCJgcGVApwXZapp')" type="button">删除</button></div>
+<div class="link" id="AXSJIfYwRgzLHDT"><a href="https://quote.cngold.org/gjs/gjhj_xhhj.html">现货黄金</a><button class="del-btn" onclick="_2delete('AXSJIfYwRgzLHDT')" type="button">删除</button></div>
+</div>
+<div class="row" id="Tools">
+<h3>Tools</h3>
+<div class="link" id="IvtU8AZ4rkNsPmI3WuwW"><a href="http://101.35.218.66:4000/">wewe-rss</a><button class="del-btn" onclick="_2delete('IvtU8AZ4rkNsPmI3WuwW')" type="button">删除</button></div>
+<div class="link" id="bxFIOHD0IGmzO0DJlGg"><a href="http://101.35.218.66:5244/">Alist</a><button class="del-btn" onclick="_2delete('bxFIOHD0IGmzO0DJlGg')" type="button">删除</button></div>
+<div class="link" id="rpIhGVesrIvgOut"><a href="https://www.jyshare.com/">菜鸟工具</a><button class="del-btn" onclick="_2delete('rpIhGVesrIvgOut')" type="button">删除</button></div>
+<div class="link" id="mLEoUScXTlPDrZy"><a href="https://tool.hhui.top/">神奇工具箱</a><button class="del-btn" onclick="_2delete('mLEoUScXTlPDrZy')" type="button">删除</button></div>
+<div class="link" id="tCiRXpphCbFzqUD"><a href="https://tool.lu/">在线工具箱</a><button class="del-btn" onclick="_2delete('tCiRXpphCbFzqUD')" type="button">删除</button></div>
+<div class="link" id="dITfkAIVtGTBjaG"><a href="http://www.hiencode.com">CTF工具箱</a><button class="del-btn" onclick="_2delete('dITfkAIVtGTBjaG')" type="button">删除</button></div>
+<div class="link" id="htCSSzYfiOFotxM"><a href="https://tool.oschina.net/">oschina工具箱</a><button class="del-btn" onclick="_2delete('htCSSzYfiOFotxM')" type="button">删除</button></div>
+<div class="link" id="llexVoTRqwXXuZx"><a href="https://bookfere.com/">书伴</a><button class="del-btn" onclick="_2delete('llexVoTRqwXXuZx')" type="button">删除</button></div>
+<div class="link" id="YwhLMstWBcHkHdJ"><a href="https://web.telegram.org/a/">Telegram</a><button class="del-btn" onclick="_2delete('YwhLMstWBcHkHdJ')" type="button">删除</button></div>
+<div class="link" id="BJLRAYnAsDgjiRj"><a href="https://chat-e2ee-2.azurewebsites.net/">chat-e2ee</a><button class="del-btn" onclick="_2delete('BJLRAYnAsDgjiRj')" type="button">删除</button></div>
+<div class="link" id="tOXwhFwxvbcYMOQ"><a href="https://www.processon.com/">ProcessOn</a><button class="del-btn" onclick="_2delete('tOXwhFwxvbcYMOQ')" type="button">删除</button></div>
+<div class="link" id="KSQSkbpKXjgoVWV"><a href="https://aierplane.com/">机场</a><button class="del-btn" onclick="_2delete('KSQSkbpKXjgoVWV')" type="button">删除</button></div>
+<div class="link" id="HPjJWWsrrCjsmHy"><a href="https://translate.google.com/">谷歌翻译</a><button class="del-btn" onclick="_2delete('HPjJWWsrrCjsmHy')" type="button">删除</button></div>
+<div class="link" id="vRLjvLfaiwZrVUb"><a href="https://web.postman.co/workspace/My-Workspace~a42025e0-3762-4097-8428-c64d6ec63dae/request/1858867-5f160bfb-2c85-4394-bc68-5070f0af0d44?tab=body">Postman</a><button class="del-btn" onclick="_2delete('vRLjvLfaiwZrVUb')" type="button">删除</button></div>
+<div class="link" id="RxHqNNFiSGXZggG"><a href="https://github.com/William-Hunter">My Github</a><button class="del-btn" onclick="_2delete('RxHqNNFiSGXZggG')" type="button">删除</button></div>
+<div class="link" id="PRfvuJAaDVWJjZh"><a href="http://101.35.218.66:8485/">Moodist</a><button class="del-btn" onclick="_2delete('PRfvuJAaDVWJjZh')" type="button">删除</button></div>
+<div class="link" id="PtMytppeHPHVGPe"><a href="https://chromewebstore.google.com/">Chrome应用商店</a><button class="del-btn" onclick="_2delete('PtMytppeHPHVGPe')" type="button">删除</button></div>
+<div class="link" id="HiiuYkaTxQOoihT"><a href="https://www.appinn.com/">小众软件 -
+                    分享免费、小巧、实用、有趣、绿色的软件</a><button class="del-btn" onclick="_2delete('HiiuYkaTxQOoihT')" type="button">删除</button></div>
+<div class="link" id="hBSCnRffGDTujpC"><a href="https://en.uptodown.com/windows">App Downloads for Windows -
+                    Download, Discover, Share on Uptodown</a><button class="del-btn" onclick="_2delete('hBSCnRffGDTujpC')" type="button">删除</button></div>
+</div>
+<div class="row" id="NAS">
+<h3>NAS</h3>
+<div class="link" id="YJKAPLrGrTRGPKb"><a href="https://hub.grapps.cn/marketplace">云应用商店</a><button class="del-btn" onclick="_2delete('YJKAPLrGrTRGPKb')" type="button">删除</button></div>
+<div class="link" id="rw6uYcPou03NsmYF3do"><a href="http://101.35.218.66:10880/">Gogs</a><button class="del-btn" onclick="_2delete('rw6uYcPou03NsmYF3do')" type="button">删除</button></div>
+<div class="link" id="HXGkcjf0njtygoCUsvhc"><a href="http://101.35.218.66:5700/login">青龙面板</a><button class="del-btn" onclick="_2delete('HXGkcjf0njtygoCUsvhc')" type="button">删除</button></div>
+<div class="link" id="w9TJ53YcZSHF94LNRveS"><a href="http://101.35.218.66:8787/">IT工具箱</a><button class="del-btn" onclick="_2delete('w9TJ53YcZSHF94LNRveS')" type="button">删除</button></div>
+<div class="link" id="aQuulZjOjEMe0B9Hu23a"><a href="http://101.35.218.66:42320/ff4ab60e96">1Panel</a><button class="del-btn" onclick="_2delete('aQuulZjOjEMe0B9Hu23a')" type="button">删除</button></div>
+<div class="link" id="SlKxxqLzfPdveBYqwYfKbpjvJ"><a href="http://101.35.218.66:9000/#!/auth">docker管理</a><button class="del-btn" onclick="_2delete('SlKxxqLzfPdveBYqwYfKbpjvJ')" type="button">删除</button></div>
+<div class="link" id="xSkhnFsBbxqBnAx"><a href="http://101.35.218.66:8677/trade_web/">炒股辅助器</a><button class="del-btn" onclick="_2delete('xSkhnFsBbxqBnAx')" type="button">删除</button></div>
+<div class="link" id="psSWIhWdlsdPLwE"><a href="http://101.35.218.66:8677/api/static/yt-dlp.html">下载视频</a><button class="del-btn" onclick="_2delete('psSWIhWdlsdPLwE')" type="button">删除</button></div>
+<div class="link" id="ZvVpsuzlpPEGrwF"><a href="http://101.35.218.66:8083/login?next=%2F">书库</a><button class="del-btn" onclick="_2delete('ZvVpsuzlpPEGrwF')" type="button">删除</button></div>
+<div class="link" id="TrdqdofuFBKUEbi"><a href="http://101.35.218.66:7778/gui/">文件同步</a><button class="del-btn" onclick="_2delete('TrdqdofuFBKUEbi')" type="button">删除</button></div>
+<div class="link" id="JgFySYiIdrGMUWG"><a href="http://101.35.218.66:7500/static/#/">内网穿透</a><button class="del-btn" onclick="_2delete('JgFySYiIdrGMUWG')" type="button">删除</button></div>
+<div class="link" id="tyqnzSNpLxBymVl"><a href="http://101.35.218.66:7777/gui/">Sync Lighthouse</a><button class="del-btn" onclick="_2delete('tyqnzSNpLxBymVl')" type="button">删除</button></div>
+<div class="link" id="JdzzqgbhzZGhWog"><a href="https://drive.google.com/drive/">谷歌drive</a><button class="del-btn" onclick="_2delete('JdzzqgbhzZGhWog')" type="button">删除</button></div>
+<div class="link" id="KJDLgKyFyskYXrz"><a href="https://mega.nz/fm/KPph3Ioa">Mega云盘</a><button class="del-btn" onclick="_2delete('KJDLgKyFyskYXrz')" type="button">删除</button></div>
+<div class="link" id="vTPZoZnBRVSMyAa"><a href="https://www.icloud.com/">iCloud</a><button class="del-btn" onclick="_2delete('vTPZoZnBRVSMyAa')" type="button">删除</button></div>
+</div>
+<div class="row" id="AI">
+<h3>AI</h3>
+<div class="link" id="ClFgPkbKqQOtDsB"><a href="https://chat.openai.com/chat">ChatGPT</a><button class="del-btn" onclick="_2delete('ClFgPkbKqQOtDsB')" type="button">删除</button></div>
+<div class="link" id="GIdmMbqAnanXNVQ"><a href="https://devv.ai/zh">Devv.ai</a><button class="del-btn" onclick="_2delete('GIdmMbqAnanXNVQ')" type="button">删除</button></div>
+<div class="link" id="bDuIIRvUVeefGOg"><a href="https://www.phind.com/search?home=true">phind.AI</a><button class="del-btn" onclick="_2delete('bDuIIRvUVeefGOg')" type="button">删除</button></div>
+<div class="link" id="sTrPDMkIZwujDpu"><a href="https://finchat.io/">金融chat ai</a><button class="del-btn" onclick="_2delete('sTrPDMkIZwujDpu')" type="button">删除</button></div>
+<div class="link" id="XpxbvSbZylfcThy"><a href="https://www.beebee.ai/">beebee ai</a><button class="del-btn" onclick="_2delete('XpxbvSbZylfcThy')" type="button">删除</button></div>
+</div>
+<div class="row" id="Learn">
+<h3>Learn</h3>
+<div class="link" id="GmNuLuXhbbNKTlz"><a href="https://fs.blog/second-order-thinking/">二阶思维</a><button class="del-btn" onclick="_2delete('GmNuLuXhbbNKTlz')" type="button">删除</button></div>
+<div class="link" id="ZeflhYlAQdEimvp"><a href="https://www.zhihu.com/tardis/zm/art/442486331?source_id=1003">Prompt Learning
+                    超强入门教程</a><button class="del-btn" onclick="_2delete('ZeflhYlAQdEimvp')" type="button">删除</button>
+</div>
+<div class="link" id="WtCHhwioXAyTWYl"><a href="https://zhuanlan.zhihu.com/p/399295895?utm_id=0">NLP新宠——浅谈Prompt的前世今生</a><button class="del-btn" onclick="_2delete('WtCHhwioXAyTWYl')" type="button">删除</button></div>
+<div class="link" id="wxKRWkmhnQLystD"><a href="https://zhuanlan.zhihu.com/p/636270877?utm_id=0">从零开始训练大模型</a><button class="del-btn" onclick="_2delete('wxKRWkmhnQLystD')" type="button">删除</button></div>
+<div class="link" id="CYVjjgXQWhNOuwnJshCL"><a href="https://github.com/slowmist/Blockchain-dark-forest-selfguard-handbook/blob/main/README_CN.md">Blockchain-dark-forest-selfguard-handbook/README_CN.md
+                    at main · slowmist/Blockchain-dark-forest-selfguard-handbook</a><button class="del-btn" onclick="_2delete('CYVjjgXQWhNOuwnJshCL')" type="button">删除</button></div>
+<div class="link" id="EfJJvBXvHFuqsRmShLMm"><a href="https://brain-zhang.github.io/blog/2019/11/05/hello-lightning-network-1/">Hello Lightning
+                    Network
+                    -1 - Living a Simple Life is a Happy Life</a><button class="del-btn" onclick="_2delete('EfJJvBXvHFuqsRmShLMm')" type="button">删除</button></div>
+<div class="link" id="VQdxTQJVyfLWbSXICgSJ"><a href="https://brain-zhang.github.io/blog/2019/11/26/hello-lightning-network-2/">Hello Lightning
+                    Network
+                    -2 - Living a Simple Life is a Happy Life</a><button class="del-btn" onclick="_2delete('VQdxTQJVyfLWbSXICgSJ')" type="button">删除</button></div>
+<div class="link" id="nLdeLQvikqrgPTDHFxPV"><a href="https://brain-zhang.github.io/blog/2019/11/30/hello-lightning-network-3/">Hello Lightning
+                    Network
+                    -3 - Living a Simple Life is a Happy Life</a><button class="del-btn" onclick="_2delete('nLdeLQvikqrgPTDHFxPV')" type="button">删除</button></div>
+<div class="link" id="YhzZBEZgphyXcVThrrnj"><a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md">bitcoinbook/BOOK.md at
+                    develop ·
+                    bitcoinbook/bitcoinbook</a><button class="del-btn" onclick="_2delete('YhzZBEZgphyXcVThrrnj')" type="button">删除</button></div>
+<div class="link" id="LTHRLaKPivRPVhH"><a href="https://github.com/Cactus-proj/A-Philosophy-of-Software-Design-zh/tree/main">软件设计的哲学</a><button class="del-btn" onclick="_2delete('LTHRLaKPivRPVhH')" type="button">删除</button></div>
+<div class="link" id="wxqUwaVPycEtcZWozFjO"><a href="https://journal.hexmos.com/gpu-survival-toolkit/">GPU
+                    Survival Toolkit for the AI age: The bare minimum every developer must know</a><button class="del-btn" onclick="_2delete('wxqUwaVPycEtcZWozFjO')" type="button">删除</button></div>
+<div class="link" id="hgKCDMbJyBbXrfWMaiCj"><a href="https://github.com/xxh/xxh">xxh/xxh: 🚀 Bring your
+                    favorite
+                    shell wherever you go through the ssh. Xonsh shell, fish, zsh, osquery and so on.</a><button class="del-btn" onclick="_2delete('hgKCDMbJyBbXrfWMaiCj')" type="button">删除</button></div>
+<div class="link" id="osiGpTraYnOPGtARusvP"><a href="https://github.com/brendangregg/FlameGraph">brendangregg/FlameGraph: Stack trace
+                    visualizer</a><button class="del-btn" onclick="_2delete('osiGpTraYnOPGtARusvP')" type="button">删除</button></div>
+<div class="link" id="vUlQzRLMkfdCdRNMcyhM"><a href="https://github.com/THUDM/CodeGeeX2">THUDM/CodeGeeX2:
+                    CodeGeeX2: A More Powerful Multilingual Code Generation Model</a><button class="del-btn" onclick="_2delete('vUlQzRLMkfdCdRNMcyhM')" type="button">删除</button></div>
+<div class="link" id="RantJRTKxzqReseEFrsF"><a href="https://github.com/microsoft/generative-ai-for-beginners">microsoft/generative-ai-for-beginners:
+                    18 Lessons, Get Started Building with Generative AI 🔗
+                    https://microsoft.github.io/generative-ai-for-beginners/</a><button class="del-btn" onclick="_2delete('RantJRTKxzqReseEFrsF')" type="button">删除</button></div>
+<div class="link" id="JFtYXhlnWkZgMzOezQsZ"><a href="https://github.com/yifeikong/reverse-interview-zh">yifeikong/reverse-interview-zh:
+                    技术面试最后反问面试官的话</a><button class="del-btn" onclick="_2delete('JFtYXhlnWkZgMzOezQsZ')" type="button">删除</button></div>
+<div class="link" id="OmPGcddIEUmMzBBWkHfI"><a href="https://github.com/guoyu07/ConvictConditioning">guoyu07/ConvictConditioning:
+                    囚徒健身、锻炼身体、强健体魄、写好代码！</a><button class="del-btn" onclick="_2delete('OmPGcddIEUmMzBBWkHfI')" type="button">删除</button></div>
+<div class="link" id="CjsNFVcSTbjYNVKwuEil"><a href="https://echoui.dev/zh/">Echo UI</a><button class="del-btn" onclick="_2delete('CjsNFVcSTbjYNVKwuEil')" type="button">删除</button></div>
+<div class="link" id="kzTATECBOPGeTqD"><a href="https://www.liaoxuefeng.com/article/1569797590482976">一文搞懂NFT分类与实现原理 - 廖雪峰的官方网站</a><button class="del-btn" onclick="_2delete('kzTATECBOPGeTqD')" type="button">删除</button></div>
+<div class="link" id="aUPaeASxgCaYbmJ"><a href="https://www.liaoxuefeng.com/wiki/1207298049439968">区块链教程 -
+                    廖雪峰的官方网站</a><button class="del-btn" onclick="_2delete('aUPaeASxgCaYbmJ')" type="button">删除</button>
+</div>
+<div class="link" id="IkpVRmopUCkAWPV"><a href="https://crifan.github.io/crawl_your_data_spider_technology/website/">前言 ·
+                    爬取你要的数据：爬虫技术</a><button class="del-btn" onclick="_2delete('IkpVRmopUCkAWPV')" type="button">删除</button></div>
+<div class="link" id="IVqtXkoQkvchyqB"><a href="https://easylang.dev/apps/tutorial_mcarlo.html">The Law of
+                    Large
+                    Numbers</a><button class="del-btn" onclick="_2delete('IVqtXkoQkvchyqB')" type="button">删除</button>
+</div>
+<div class="link" id="aRCxdGIGclIoGAm"><a href="https://www.spiked-online.com/2023/12/28/why-are-the-elites-suddenly-so-terrified-about-ai/">Why
+                    are the elites suddenly so terrified about AI? - spiked</a><button class="del-btn" onclick="_2delete('aRCxdGIGclIoGAm')" type="button">删除</button></div>
+<div class="link" id="KalmPMdtsnIeAhp"><a href="https://www.bentoml.com/blog/navigating-the-world-of-large-language-models">Navigating the
+                    World
+                    of Large Language Models</a><button class="del-btn" onclick="_2delete('KalmPMdtsnIeAhp')" type="button">删除</button></div>
+<div class="link" id="WqHYrnWbRJCoStG"><a href="https://rishad.substack.com/p/the-future-of-work">The Future
+                    of
+                    Work - by Rishad Tobaccowala</a><button class="del-btn" onclick="_2delete('WqHYrnWbRJCoStG')" type="button">删除</button></div>
+<div class="link" id="fWzNpwqMHREDtkQ"><a href="https://www.books.com.tw/products/CN11011790">博客來-海權戰略︰鄭芝龍、鄭成功海商集團紀事</a><button class="del-btn" onclick="_2delete('fWzNpwqMHREDtkQ')" type="button">删除</button></div>
+<div class="link" id="ECJMyIbMladSeuu"><a href="https://zh.m.wikipedia.org/zh-cn/%E5%BE%AA%E8%AF%81%E5%8C%BB%E5%AD%A6">循证医学 -
+                    维基百科，自由的百科全书</a><button class="del-btn" onclick="_2delete('ECJMyIbMladSeuu')" type="button">删除</button>
+</div>
+<div class="link" id="QbMfzmunzWRCPmu"><a href="https://coolshell.cn/articles/22398.html">我看ChatGPT:
+                    为啥谷歌掉了千亿美金
+                    | 酷 壳 - CoolShell</a><button class="del-btn" onclick="_2delete('QbMfzmunzWRCPmu')" type="button">删除</button></div>
+<div class="link" id="yQywxCyrdwpVwju"><a href="https://open.163.com/newview/movie/free?pid=ZIAL7EHOQ&amp;mid=RIAL7EHPF">那些颠覆你价值观的成长技巧！堪比人生外挂！【歌白】-网易公开课</a><button class="del-btn" onclick="_2delete('yQywxCyrdwpVwju')" type="button">删除</button></div>
+<div class="link" id="YWwpoiLemEirpKv"><a href="https://www.google.com/search?q=java%E7%81%AB%E7%84%B0%E5%9B%BE&amp;rlz=1CDGOYI_enCN1067CN1068&amp;oq=java%E7%81%AB%E7%84%B0%E5%9B%BE&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgMGIAEMgkIAhAAGAwYgAQyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYBRge0gEINDQzNGowajSoAgCwAgA&amp;hl=zh-CN&amp;sourceid=chrome-mobile&amp;ie=UTF-8">java火焰图
+                    - Google 搜索</a><button class="del-btn" onclick="_2delete('YWwpoiLemEirpKv')" type="button">删除</button>
+</div>
+<div class="link" id="qhyghEYBgOxCSXw"><a href="https://aibydoing.com/intro">动手实战人工智能 AI By Doing — 动手实战人工智能
+                    AI
+                    By Doing</a><button class="del-btn" onclick="_2delete('qhyghEYBgOxCSXw')" type="button">删除</button>
+</div>
+<div class="link" id="nBZAahPhkEiwbDf"><a href="https://www.ggnotes.com/the-best-way-to-get-unstuck/">The
+                    best
+                    way to get unstuck</a><button class="del-btn" onclick="_2delete('nBZAahPhkEiwbDf')" type="button">删除</button></div>
+<div class="link" id="pFSHSzNaxavPSgB"><a href="https://zh.d2l.ai/index.html">《动手学深度学习》 — 动手学深度学习 2.0.0
+                    documentation</a><button class="del-btn" onclick="_2delete('pFSHSzNaxavPSgB')" type="button">删除</button>
+</div>
+<div class="link" id="BraBlLpMmzOLemu"><a href="https://coolshell.cn/articles/21672.html">我做系统架构的一些原则 | 酷 壳
+                    -
+                    CoolShell</a><button class="del-btn" onclick="_2delete('BraBlLpMmzOLemu')" type="button">删除</button>
+</div>
+<div class="link" id="jCJTgOOwUAciQNE"><a href="https://www.sap.cn/products/technology-platform/cloud-analytics/what-is-business-intelligence.html">什么是商业智能
+                    (BI)？| SAP</a><button class="del-btn" onclick="_2delete('jCJTgOOwUAciQNE')" type="button">删除</button>
+</div>
+<div class="link" id="TUnINWxuwMlAZka"><a href="https://coolshell.cn/articles/22422.html">是微服务架构不香还是云不香？ | 酷
+                    壳 -
+                    CoolShell</a><button class="del-btn" onclick="_2delete('TUnINWxuwMlAZka')" type="button">删除</button>
+</div>
+<div class="link" id="NqkMsyLpSlOOgcO"><a href="https://doosho.com/cn/115/11/1/1">第一回　悲太平会员怀旧
+                    破寥寂社长贻书|月界旅行|第十一卷|鲁迅全集1938年版|读书</a><button class="del-btn" onclick="_2delete('NqkMsyLpSlOOgcO')" type="button">删除</button></div>
+<div class="link" id="WKhs1eFNJG7cd21tjvuV"><a href="https://www.youtube.com/@ByteByteGo/community">ByteByteGo</a><button class="del-btn" onclick="_2delete('WKhs1eFNJG7cd21tjvuV')" type="button">删除</button></div>
+<div class="link" id="GGZSQmVigPvpdeT"><a href="https://book.kotlincn.net/text/home.html">文档 · Kotlin 官方文档
+                    中文版</a><button class="del-btn" onclick="_2delete('GGZSQmVigPvpdeT')" type="button">删除</button></div>
+<div class="link" id="AgQIYIuUJgYidSduJTuY"><a href="https://github.com/trustedsec/social-engineer-toolkit">trustedsec/social-engineer-toolkit: The
+                    Social-Engineer Toolkit (SET) repository from TrustedSec - All new versions of SET will be deployed
+                    here.</a><button class="del-btn" onclick="_2delete('AgQIYIuUJgYidSduJTuY')" type="button">删除</button>
+</div>
+<div class="link" id="EpKUjLpqbSgxwfw"><a href="https://www.tony-bro.com/posts/79505776/index.html">Java异步Http客户端对比测试</a><button class="del-btn" onclick="_2delete('EpKUjLpqbSgxwfw')" type="button">删除</button></div>
+<div class="link" id="IXfLWKFWKCQnpjM"><a href="https://tech.meituan.com/2016/12/26/data-consistency.html">美团酒店直连产品数据一致性演进</a><button class="del-btn" onclick="_2delete('IXfLWKFWKCQnpjM')" type="button">删除</button></div>
+<div class="link" id="LeAYy45Vwd7sgLDXmrg"><a href="https://www.google.com/search?q=redis+%E5%A4%9A%E7%BA%BF%E7%A8%8Bio&amp;newwindow=1&amp;sca_esv=576e4e7685de117a&amp;sca_upv=1&amp;sxsrf=ACQVn0_egoQ5rSqYQgGORxK-I8tBO4u3Gw%3A1711934503553&amp;ei=JwwKZru3IdeH1e8Ps8GAwAw&amp;ved=0ahUKEwj75tn_7J-FAxXXQ_UHHbMgAMgQ4dUDCBA&amp;uact=5&amp;oq=redis+%E5%A4%9A%E7%BA%BF%E7%A8%8Bio&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiEXJlZGlzIOWkmue6v-eoi2lvMgUQABiABEi2H1DIAljXG3ABeAGQAQCYAbsBoAHICqoBBDEuMTG4AQPIAQD4AQGYAg2gAvYKwgIKEAAYRxjWBBiwA8ICChAjGIAEGIoFGCfCAgQQIxgnwgIKEAAYgAQYigUYQ8ICBxAAGIAEGAyYAwCIBgGQBgqSBwQyLjExoAeEFg&amp;sclient=gws-wiz-serp">redis
+                    多线程io</a><button class="del-btn" onclick="_2delete('LeAYy45Vwd7sgLDXmrg')" type="button">删除</button>
+</div>
+<div class="link" id="dFhgTQvXPHVPkel"><a href="https://www.google.com/search?q=LLM%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83&amp;newwindow=1&amp;sca_esv=577535786&amp;biw=1502&amp;bih=913&amp;ei=k-Y9Zf3mJq-P2roP1ZSg4A0&amp;ved=0ahUKEwi9_Mi8vJqCAxWvh1YBHVUKCNwQ4dUDCBA&amp;uact=5&amp;oq=LLM%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiD0xMTeaooeWei-iuree7gzIFEAAYgARIjSpQ6QdYgyhwAXgAkAEAmAGuAaAB1QaqAQMwLja4AQPIAQD4AQH4AQLCAgoQABhHGNYEGLADwgIGEAAYBxgewgIFEAAYogTiAwQYACBBiAYBkAYK&amp;sclient=gws-wiz-serp">llm模型训练</a><button class="del-btn" onclick="_2delete('dFhgTQvXPHVPkel')" type="button">删除</button></div>
+<div class="link" id="ZTVApEEBbCRKmju"><a href="https://github.com/Cactus-proj/A-Philosophy-of-Software-Design-zh/tree/main">软件设计的哲学</a><button class="del-btn" onclick="_2delete('ZTVApEEBbCRKmju')" type="button">删除</button></div>
+<div class="link" id="BfpIpKUhGRpuPph"><a href="https://juejin.cn/post/6908271959381901325">一文快速入门 Kotlin 协程
+                    -
+                    掘金</a><button class="del-btn" onclick="_2delete('BfpIpKUhGRpuPph')" type="button">删除</button></div>
+<div class="link" id="NOOhAtKPKXFvGRK"><a href="https://m.douban.com/book/subject/33401218/">点石成金
+                    (豆瓣)</a><button class="del-btn" onclick="_2delete('NOOhAtKPKXFvGRK')" type="button">删除</button>
+</div>
+</div>
+<div class="row" id="Map">
+<h3>Map</h3>
+<div class="link" id="hPhzWqJepzMBGCLBQIww"><a href="https://www.google.com/maps/@34.1966531,113.7035599,76625a,35y,34.23t/data=!3m1!1e3"> Google
+                    地圖 </a><button class="del-btn" onclick="_2delete('hPhzWqJepzMBGCLBQIww')" type="button">删除</button>
+</div>
+<div class="link" id="RNrnHvhKKzRqCnMXjMAT"><a href="https://map.baidu.com/@12657647.671856025,4108094.3060110407,15z,50t">百度地图</a><button class="del-btn" onclick="_2delete('RNrnHvhKKzRqCnMXjMAT')" type="button">删除</button></div>
+<div class="link" id="AGlWoyMMXrIhkCXHkPiZ"><a href="https://ditu.amap.com/">
+                    高德地图
+                </a><button class="del-btn" onclick="_2delete('AGlWoyMMXrIhkCXHkPiZ')" type="button">删除</button></div>
+<div class="link" id="RzDOOFOcemOySLQ"><a href="https://www.worldtimezone.com/index_cn.php">时钟地图</a><button class="del-btn" onclick="_2delete('RzDOOFOcemOySLQ')" type="button">删除</button></div>
+</div>
+<br/>
+        ------------------------------------------------------------------------------------------
+        <br/>
+<div class="link" id="kcMGQoBoHGpsCqW"><a href="https://www.paypal.com/myaccount/summary?intl=0">paypal</a><button class="del-btn" onclick="_2delete('kcMGQoBoHGpsCqW')" type="button">删除</button></div>
+<div class="link" id="ZbhvzpPDIwWyJIs"><a href="https://www.12306.cn/index/index.html">12306</a><button class="del-btn" onclick="_2delete('ZbhvzpPDIwWyJIs')" type="button">删除</button></div>
+<div class="link" id="YUcjUbGgMmGjlur"><a href="https://www.ahhhhfs.com/">ahhhhfs - A姐分享</a><button class="del-btn" onclick="_2delete('YUcjUbGgMmGjlur')" type="button">删除</button></div>
+<div class="link" id="SkMCfaBAvkeyaTx"><a href="https://laosheng.top/">老生常谈 | Laosheng.top</a><button class="del-btn" onclick="_2delete('SkMCfaBAvkeyaTx')" type="button">删除</button></div>
+<div class="link" id="SlBethbgjOqBQGZ"><a href="https://www.honga.net/totalwar/index.php?encode=zhcn">全面战争 :
                 皇家军事学院</a><button class="del-btn" onclick="_2delete('SlBethbgjOqBQGZ')" type="button">删除</button></div>
-        <div class="link" id="HiiuYkaTxQOoihT"><a href="https://www.appinn.com/">小众软件 - 分享免费、小巧、实用、有趣、绿色的软件</a><button
-                class="del-btn" onclick="_2delete('HiiuYkaTxQOoihT')" type="button">删除</button></div>
-        <div class="link" id="hBSCnRffGDTujpC"><a href="https://en.uptodown.com/windows">App Downloads for Windows -
-                Download, Discover, Share on Uptodown</a><button class="del-btn" onclick="_2delete('hBSCnRffGDTujpC')"
-                type="button">删除</button></div>
-        <div class="link" id="byxjPVmUYWNYePL"><a href="https://colors.ichuantong.cn/">苍色 - 中国传统颜色手册 | Chinese Color
+<div class="link" id="byxjPVmUYWNYePL"><a href="https://colors.ichuantong.cn/">苍色 - 中国传统颜色手册 | Chinese Color
                 Cheatsheet</a><button class="del-btn" onclick="_2delete('byxjPVmUYWNYePL')" type="button">删除</button>
-        </div>
-    </div>
-    <!-- <br /><br /><br /> -->
-    <div id="add">
-        <!-- <input class="iinput inlinne" id="title" name="title" placeholder="请输入标题" type="text" /> -->
-        <input class="iinput inlinne" id="url" name="url" placeholder="请输入链接" type="text" />
-        <br />
-        <button class="butt inlinne" onclick="add()" type="button">
+</div>
+<div class="link" id="glqvudEfNweGnrv"><a href="https://cn.dubbo.apache.org/zh-cn/">Apache Dubbo</a><button class="del-btn" onclick="_2delete('glqvudEfNweGnrv')" type="button">删除</button></div>
+<div class="link" id="AssCPXkfoEXIvqC"><a href="https://spring.io/projects/spring-cloud">春云 --- Spring
+                Cloud</a><button class="del-btn" onclick="_2delete('AssCPXkfoEXIvqC')" type="button">删除</button></div>
+<div class="link" id="XcGUqNgMrzcCOjG"><a href="https://www.zhihu.com/question/332042250?utm_id=0">为什么 Java
+                坚持多线程不选择协程？ - 知乎</a><button class="del-btn" onclick="_2delete('XcGUqNgMrzcCOjG')" type="button">删除</button></div>
+<div class="link" id="zYQxIoHUOCoEdQC"><a href="https://cn.bing.com/search?q=Perplexity&amp;setmkt=zh-CN&amp;PC=EMMX01&amp;form=EPIT2E&amp;scope=web">Perplexity
+                - 搜索</a><button class="del-btn" onclick="_2delete('zYQxIoHUOCoEdQC')" type="button">删除</button></div>
+<div class="link" id="DbVPOgWnQutTeqC"><a href="https://wallstreetcn.com/articles/3711955">Perplexity要搞竞价排名了，大模型的尽头……就还是广告？ - 华尔街见闻</a><button class="del-btn" onclick="_2delete('DbVPOgWnQutTeqC')" type="button">删除</button></div>
+<div class="link" id="OwdApSMhJLVnyzQ"><a href="https://m.ylib.com/book/N9084">YLib 遠流博識網 - 遠流網路書店</a><button class="del-btn" onclick="_2delete('OwdApSMhJLVnyzQ')" type="button">删除</button></div>
+<div class="link" id="doBioDjBVGkdByx"><a href="https://www.google.com/search?q=%E5%A4%96%E5%87%BA%E5%87%86%E5%A4%87%E4%BA%8B%E9%A1%B9">外出准备事项 -
+                Google 搜尋</a><button class="del-btn" onclick="_2delete('doBioDjBVGkdByx')" type="button">删除</button>
+</div>
+<div class="link" id="CcCxzOYTvWGMJJeJMCix"><a href="https://sahillavingia.com/work">No Meetings, No Deadlines,
+                No Full-Time Employees</a><button class="del-btn" onclick="_2delete('CcCxzOYTvWGMJJeJMCix')" type="button">删除</button></div>
+<div class="link" id="LKKvNWqKgPvYWkKQTgOQ"><a href="https://github.com/hehehai/x-hiring">hehehai/x-hiring: 🤗
+                每日最新招聘信息，使用 Google AI 提取摘要</a><button class="del-btn" onclick="_2delete('LKKvNWqKgPvYWkKQTgOQ')" type="button">删除</button></div>
+<div class="link" id="QhDydzyNeESthVeImadb"><a href="https://www.w3schools.com/html/html_css.asp">HTML Styles
+                CSS</a><button class="del-btn" onclick="_2delete('QhDydzyNeESthVeImadb')" type="button">删除</button>
+</div>
+<div class="link" id="aAKcxpJzgvadOrvprpho"><a href="https://juejin.cn/post/6974356682574921765">flex布局子元素宽度超出父元素问题 - 掘金</a><button class="del-btn" onclick="_2delete('aAKcxpJzgvadOrvprpho')" type="button">删除</button></div>
+<div class="link" id="wwqshhMWvqMJVXAQsyIR"><a href="https://coolshell.cn/articles/22298.html">聊聊团队协同和协同工具 | 酷 壳
+                - CoolShell</a><button class="del-btn" onclick="_2delete('wwqshhMWvqMJVXAQsyIR')" type="button">删除</button></div>
+<div class="link" id="WyrPJKmxthCXJTjcZYrX"><a href="https://www.perplexity.ai/">Perplexity</a><button class="del-btn" onclick="_2delete('WyrPJKmxthCXJTjcZYrX')" type="button">删除</button></div>
+<div class="link" id="AHkBlqDLFRJGZbMHRgdW"><a href="https://coolshell.cn/articles/22298.html">聊聊团队协同和协同工具 | 酷 壳 - CoolShell</a><button class="del-btn" onclick="_2delete('AHkBlqDLFRJGZbMHRgdW')" type="button">删除</button></div></div>
+<div id="add">
+<!-- <input class="iinput inlinne" id="title" name="title" placeholder="请输入标题" type="text" /> -->
+<!-- <input class="iinput inlinne" id="url" name="url" placeholder="请输入链接" type="text" /> -->
+<div class="oneline">
+<input class="inlinne" id="url" name="url" placeholder="请输入链接" style="width: 74%;" type="text"/>
+<select class="inlinne" id="category" style="width: 20%;">
+<option value=""></option>
+<option value="Daily">Daily</option>
+<option value="Finance">Finance</option>
+<option value="Map">Map</option>
+<option value="Tools">Tools</option>
+<option value="NAS">NAS</option>
+<option value="AI">AI</option>
+<option value="Learn">Learn</option>
+</select>
+</div>
+<br/>
+<button class="butt inlinne" onclick="add()" type="button">
             添加链接
         </button>
-    </div>
+</div>
 </body>
 <script>
     var domain = window.location.host;
-
 
     function onKeyPress(e) {
         var keyCode = null;
@@ -446,8 +439,14 @@
         // console.log(domain)
 
         var url = document.getElementById("url").value;
+        var category = document.getElementById("category").value;
+
         var title = ""
         // var title = document.getElementById("title").value;
+
+        if (null == category || undefined == category) {
+            category = ""
+        }
 
         if (null == url || undefined == url) {
             alert("url 不能为空")
@@ -477,7 +476,7 @@
         // return
         axios({// GET request for remote image in node.js
             method: 'get',
-            url: 'http://' + domain + '/api/link_keeper/add?url=' + url + "&title=" + title
+            url: 'http://' + domain + '/api/link_keeper/add?url=' + url + "&title=" + title + "&category=" + category
         }).then(function (response) {
             console.log(response.data)
             if (200 == response.data.code) {
@@ -528,5 +527,4 @@
     }
 
 </script>
-
 </html>
