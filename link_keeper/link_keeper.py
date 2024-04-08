@@ -39,6 +39,7 @@ def getHtml(url):
 def saveLinkList(htmlCode,html_path):
     with open(html_path, 'w') as file:
         file.write(str(htmlCode))
+        file.close()
 
 
 def getLinkList(html_path):
@@ -48,6 +49,7 @@ def getLinkList(html_path):
     htmlcode=None
     with open(html_path, 'r') as file:
         htmlcode=file.read()
+        file.close()
 
     soup = BeautifulSoup(htmlcode, 'html.parser')
     return soup
@@ -80,6 +82,8 @@ def add(url,title,type,category):
     if category is not None and "" != category:
         css_query=css_query+" div#"+category
     
+    current_app.logger.info('css_query:\n'+css_query)
+
     body=htmlSoup.select_one(css_query)
 
     id=pickupNumber(20)
