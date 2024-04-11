@@ -21,7 +21,8 @@ case $1 in
         echo "启动信号已经发出"
         ;;
     'restart')
-        _stop && _start
+        _stop
+        _start
         echo "重启信号已经发出"
         ;;
     'stop')

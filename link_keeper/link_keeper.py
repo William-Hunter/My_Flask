@@ -32,7 +32,8 @@ def getHtml(url):
     print(response)
     if 200==response.status_code:
         result= response.text
-
+    else:    
+        result= ""
     # print(result)
     return result
 
@@ -67,10 +68,25 @@ def pickupNumber(length=15):
     print(string)
     return string
 
+def isEmpty(obj):
+    if obj is None or ""==obj or ""== obj.strip():
+        return True
+    else: 
+        return False
+
+
+def isNotEmpty(obj):
+    return not isEmpty(obj)
+
 
 def getTitle(url):
-    soup = BeautifulSoup(getHtml(url), 'html.parser')
-    title=soup.title.text
+    code=getHtml(url)
+    if isNotEmpty(code):
+        soup = BeautifulSoup(code, 'html.parser')
+        title=soup.title.text
+    else:
+        title=url
+
     return title
 
 

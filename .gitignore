@@ -131,7 +131,10 @@ dmypy.json
 
 **/*.log
 
+**/*.swp
+
 **/ppp*
+
 
 
 **/__pycache__
