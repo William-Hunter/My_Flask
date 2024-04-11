@@ -86,7 +86,7 @@ def add(url,title,type,category):
 
     body=htmlSoup.select_one(css_query)
 
-    id=pickupNumber(20)
+    id=pickupNumber(25)
 
     new_div = htmlSoup.new_tag("div",id=id) 
     new_div['class']='link'
@@ -120,7 +120,7 @@ def delete(id,type):
 
 def selectType(type):
     if type is not None and 'ppp'==type:
-        HTML_PATH="/opt/workspace/flask/static/ppp.html"
+        HTML_PATH="/opt/workspace/flask/static/link_keeper.html"
     else:
         HTML_PATH="/opt/workspace/flask/static/link_keeper.html"
     return HTML_PATH
