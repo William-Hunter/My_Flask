@@ -84,6 +84,10 @@ def getTitle(url):
     if isNotEmpty(code):
         soup = BeautifulSoup(code, 'html.parser')
         title=soup.title.text
+
+        if title is None or ''==title.strip():
+            title=url
+
     else:
         title=url
 
