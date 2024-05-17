@@ -16,8 +16,8 @@ export http_proxy=http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7
 downloader=/opt/workspace/flask/ytdlpmod/yt-dlp_linux
 
 
-video_root=/opt/data/sync/folders/outsider
-#video_root=/opt/data/media/Video
+#video_root=/opt/data/sync/folders/outsider
+video_root=/opt/data/media/Video
 audio_root=/opt/data/media/Audio
 #audio_root=/opt/data/sync/folders/Podcast
 
