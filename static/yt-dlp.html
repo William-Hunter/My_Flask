@@ -60,8 +60,17 @@
     B站 MP3下载
   </button>
 
+  <button type="button" id="" class="butt inlinne" onclick="clean()">
+    清除
+  </button>
+
 </body>
 <script>
+
+
+function clean(){
+  document.getElementById("url").value="";
+}
 
   function dosomething(type) {
     var url = document.getElementById("url").value;
