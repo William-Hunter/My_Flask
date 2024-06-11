@@ -23,7 +23,17 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    for (var i = 1; i < 5; i++) {
+await loop(10,2)
+speak({
+        text: '播放完毕'
+    }, function () {
+        console.log('语音播放结束');
+    }, function () {
+        console.log('语音开始播放');
+    });
+
+async function loop(max,delay){
+    for (var i = 1; i <=max; i++) {
         speak({
             text: i+""
         }, function () {
@@ -32,20 +42,10 @@
             console.log('语音开始播放');
         });
 
-        await sleep(2000);
-        window.alert(i)
-        console.log('已经暂停了2秒');
+        await sleep(delay*1000);
     }
 
-
-    speak({
-        text: '播放完毕'
-    }, function () {
-        console.log('语音播放结束');
-    }, function () {
-        console.log('语音开始播放');
-    });
-
+}
 
 
     /**
